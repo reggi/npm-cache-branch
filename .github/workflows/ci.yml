@@ -42,9 +42,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          if git show-ref --quiet refs/heads/cache-branch; then
+          git fetch origin
+          if git show-ref --quiet refs/remotes/origin/cache-branch; then
             echo "cache-branch exists"
             git checkout cache-branch
+            git pull origin cache-branch
             git add .npm/cache
           else
             echo "cache-branch does not exist, creating it"
