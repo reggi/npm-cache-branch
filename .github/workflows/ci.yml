@@ -23,6 +23,7 @@ jobs:
           node-version: '22.x'
 
       - name: Download npm cache from cache branch if cache miss
+        continue-on-error: true
         run: |
           echo "Downloading npm cache from cache branch"
           git fetch origin cache-branch
