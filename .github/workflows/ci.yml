@@ -32,7 +32,7 @@ jobs:
 
       - name: Download npm cache artifact if cache miss
         if: steps.cache-npm.outputs.cache-hit != 'true'
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: npm-cache
           path: .npm/cache
@@ -42,7 +42,7 @@ jobs:
 
       - name: Save npm cache as artifact
         if: steps.cache-npm.outputs.cache-hit != 'true'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: npm-cache
           path: .npm/cache
