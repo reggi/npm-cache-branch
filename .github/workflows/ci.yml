@@ -54,7 +54,7 @@ jobs:
             git rm -rf .
             git add .npm/cache
           fi
-          echo ".npm/cache/_logs/" > .gitignore
+          echo "_logs" > .gitignore
           git add .gitignore
           if ! git diff-index --quiet HEAD; then
             LAST_COMMIT_MSG=$(git log -1 --pretty=%B origin/main)
