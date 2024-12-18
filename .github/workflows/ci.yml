@@ -31,23 +31,27 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Download npm cache artifact if cache miss
+      - name: Download npm cache from cache branch if cache miss
         if: steps.cache-npm.outputs.cache-hit != 'true'
-        continue-on-error: true
-        uses: actions/download-artifact@v4
-        with:
-          name: npm-cache
-          path: .npm/cache
+        run: |
+          echo "Downloading npm cache from cache branch"
+          git fetch origin cache-branch
+          git checkout origin/cache-branch -- .npm/cache
 
       - name: Install dependencies
         run: npm install --cache .npm/cache
 
-      - name: Save npm cache as artifact
-        if: steps.cache-npm.outputs.cache-hit != 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: npm-cache
-          path: .npm/cache
-
       - name: Run tests
         run: npm test
+
+      - name: Commit and push npm cache to cache branch
+        if: steps.cache-npm.outputs.cache-hit != 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b cache-branch
+          git add .npm/cache
+          git commit -m "Update npm cache"
+          git push origin cache-branch --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
