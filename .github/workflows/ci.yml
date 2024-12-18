@@ -46,7 +46,8 @@ jobs:
           git rm -rf .
           git add .npm/cache
           if ! git diff-index --quiet HEAD; then
-            git commit -m "Update npm cache"
+            LAST_COMMIT_MSG=$(git log -1 --pretty=%B origin/main)
+            git commit -m "$LAST_COMMIT_MSG"
             git push origin cache-branch --force
           else
             echo "No changes to commit"
