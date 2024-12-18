@@ -42,12 +42,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -b cache-branch
-          rm .gitignore
-          echo "!.npm/cache" > .gitignore
-          echo "*" >> .gitignore
-          git add .gitignore
-          git add -f .npm/cache
+          git checkout --orphan cache-branch
+          git add .npm/cache
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update npm cache"
             git push origin cache-branch --force
