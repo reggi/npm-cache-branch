@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: Download npm cache from cache branch if cache miss
+      - name: Download npm cache
         continue-on-error: true
         run: |
           echo "Downloading npm cache from cache branch"
@@ -38,7 +38,7 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Commit and push npm cache to cache branch if there are changes
+      - name: Commit npm cache if changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
