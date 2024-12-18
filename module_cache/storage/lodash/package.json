@@ -10094,7 +10094,7 @@
 	"_uplinks": {
 		"npmjs": {
 			"etag": "W/\"87a14fc18b31f3701ff72286dd8aca15\"",
-			"fetched": 1734468581120
+			"fetched": 1734535470603
 		}
 	},
 	"_distfiles": {
@@ -10674,7 +10674,7 @@
 			"shasum": "679591c564c3bffaae8454cf0b3df370c3d6911c"
 		}
 	},
-	"_rev": "2-6cc4328a64f8cc2e",
+	"_rev": "2-05bc38311e9b98ae",
 	"_id": "lodash",
 	"readme": "# lodash v4.17.21\n\nThe [Lodash](https://lodash.com/) library exported as [Node.js](https://nodejs.org/) modules.\n\n## Installation\n\nUsing npm:\n```shell\n$ npm i -g npm\n$ npm i --save lodash\n```\n\nIn Node.js:\n```js\n// Load the full build.\nvar _ = require('lodash');\n// Load the core build.\nvar _ = require('lodash/core');\n// Load the FP build for immutable auto-curried iteratee-first data-last methods.\nvar fp = require('lodash/fp');\n\n// Load method categories.\nvar array = require('lodash/array');\nvar object = require('lodash/fp/object');\n\n// Cherry-pick methods for smaller browserify/rollup/webpack bundles.\nvar at = require('lodash/at');\nvar curryN = require('lodash/fp/curryN');\n```\n\nSee the [package source](https://github.com/lodash/lodash/tree/4.17.21-npm) for more details.\n\n**Note:**<br>\nInstall [n_](https://www.npmjs.com/package/n_) for Lodash use in the Node.js < 6 REPL.\n\n## Support\n\nTested in Chrome 74-75, Firefox 66-67, IE 11, Edge 18, Safari 11-12, & Node.js 8-12.<br>\nAutomated [browser](https://saucelabs.com/u/lodash) & [CI](https://travis-ci.org/lodash/lodash/) test runs are available."
 }

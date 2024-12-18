@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.21",
-    "semver": "^7.6.3",
-    "verdaccio": "file:module_cache/storage/verdaccio/verdaccio-6.0.4.tgz"
+    "semver": "^7.6.3"
   }
 }

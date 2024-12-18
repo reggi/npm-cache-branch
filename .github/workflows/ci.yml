@@ -22,10 +22,7 @@ jobs:
           node-version: '22.x'
 
       - name: Config registry
-        run: npm set registry file://./cache/module_cache/storage
-
-      - name: Install dependencies
-        run: npm install
+        run: sh ./module_cache/steps/4.depless-install.sh
 
       - name: Run tests
         run: npm test

@@ -1,0 +1,54 @@
+0 verbose cli /Users/reggi/.nvm/versions/node/v22.9.0/bin/node /Users/reggi/.nvm/versions/node/v22.9.0/bin/npm
+1 info using npm@11.0.0
+2 info using node@v22.9.0
+3 silly config load:file:/Users/reggi/.nvm/versions/node/v22.9.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/reggi/Desktop/cache/.npmrc
+5 silly config load:file:/Users/reggi/.npmrc
+6 silly config load:file:/Users/reggi/.nvm/versions/node/v22.9.0/etc/npmrc
+7 verbose title npm i
+8 verbose argv "i" "--no-audit" "--cache" "./module_cache/cache" "--force" "--loglevel" "silly"
+9 verbose logfile logs-max:10 dir:/Users/reggi/Desktop/cache/module_cache/cache/_logs/2024-12-18T15_21_13_850Z-
+10 verbose logfile /Users/reggi/Desktop/cache/module_cache/cache/_logs/2024-12-18T15_21_13_850Z-debug-0.log
+11 warn using --force Recommended protections disabled.
+12 silly logfile done cleaning log files
+13 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+14 http fetch GET 404 http://localhost:4873/npm 16ms
+15 http fetch GET 404 http://localhost:4873/npm 3ms
+16 silly idealTree buildDeps
+17 silly fetch manifest lodash@^4.17.21
+18 silly packumentCache full:http://localhost:4873/lodash cache-miss
+19 http fetch GET 404 http://localhost:4873/lodash 3ms (cache skip)
+20 silly fetch manifest semver@^7.6.3
+21 silly packumentCache full:http://localhost:4873/semver cache-miss
+22 http fetch GET 404 http://localhost:4873/semver 2ms (cache skip)
+23 silly placeDep ROOT lodash@ OK for: untitled-folder@1.0.0 want: ^4.17.21
+24 silly placeDep ROOT semver@ OK for: untitled-folder@1.0.0 want: ^7.6.3
+25 verbose stack HttpErrorGeneral: 404 Not Found - GET http://localhost:4873/lodash - no such package available
+25 verbose stack     at /Users/reggi/.nvm/versions/node/v22.9.0/lib/node_modules/npm/node_modules/npm-registry-fetch/lib/check-response.js:103:15
+25 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+25 verbose stack     at async RegistryFetcher.packument (/Users/reggi/.nvm/versions/node/v22.9.0/lib/node_modules/npm/node_modules/pacote/lib/registry.js:90:19)
+25 verbose stack     at async RegistryFetcher.manifest (/Users/reggi/.nvm/versions/node/v22.9.0/lib/node_modules/npm/node_modules/pacote/lib/registry.js:128:23)
+25 verbose stack     at async #fetchManifest (/Users/reggi/.nvm/versions/node/v22.9.0/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1202:20)
+25 verbose stack     at async #nodeFromEdge (/Users/reggi/.nvm/versions/node/v22.9.0/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1040:19)
+25 verbose stack     at async #buildDepStep (/Users/reggi/.nvm/versions/node/v22.9.0/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:904:11)
+25 verbose stack     at async Arborist.buildIdealTree (/Users/reggi/.nvm/versions/node/v22.9.0/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:181:7)
+25 verbose stack     at async Promise.all (index 1)
+25 verbose stack     at async Arborist.reify (/Users/reggi/.nvm/versions/node/v22.9.0/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:131:5)
+26 verbose statusCode 404
+27 verbose pkgid lodash@^4.17.21
+28 error code E404
+29 error 404 Not Found - GET http://localhost:4873/lodash - no such package available
+30 error 404
+31 error 404  'lodash@^4.17.21' is not in this registry.
+32 error 404
+33 error 404 Note that you can also install from a
+34 error 404 tarball, folder, http url, or git url.
+35 silly unfinished npm timer reify 1734535274116
+36 silly unfinished npm timer reify:loadTrees 1734535274116
+37 verbose cwd /Users/reggi/Desktop/cache
+38 verbose os Darwin 24.1.0
+39 verbose node v22.9.0
+40 verbose npm  v11.0.0
+41 verbose exit 1
+42 verbose code 1
+43 error A complete log of this run can be found in: /Users/reggi/Desktop/cache/module_cache/cache/_logs/2024-12-18T15_21_13_850Z-debug-0.log
