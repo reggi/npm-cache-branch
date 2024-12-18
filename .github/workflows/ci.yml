@@ -42,9 +42,16 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout cache-branch
-          git rm -rf .
-          git add .npm/cache
+          if git show-ref --quiet refs/heads/cache-branch; then
+            echo "cache-branch exists"
+            git checkout cache-branch
+            git add .npm/cache
+          else
+            echo "cache-branch does not exist, creating it"
+            git checkout -b cache-branch
+            git rm -rf .
+            git add .npm/cache
+          fi
           if ! git diff-index --quiet HEAD; then
             LAST_COMMIT_MSG=$(git log -1 --pretty=%B origin/main)
             git commit -m "$LAST_COMMIT_MSG"
