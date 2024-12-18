@@ -38,13 +38,20 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Commit and push npm cache to cache branch
+      - name: Commit and push npm cache to cache branch if there are changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -b cache-branch
+          echo "!.npm/cache" > .gitignore
+          echo "*" >> .gitignore
+          git add .gitignore
           git add .npm/cache
-          git commit -m "Update npm cache"
-          git push origin cache-branch --force
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Update npm cache"
+            git push origin cache-branch --force
+          else
+            echo "No changes to commit"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
