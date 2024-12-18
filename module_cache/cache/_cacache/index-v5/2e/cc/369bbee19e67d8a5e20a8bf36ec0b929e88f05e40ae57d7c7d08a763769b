@@ -1,2 +1,0 @@
-
-05d210d39656b4d1c7d2f4cdf92e6a98669be9cb	{"key":"make-fetch-happen:request-cache:http://localhost:4873/lodash/-/lodash-4.17.21.tgz","integrity":"sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==","time":1734535471038,"size":318961,"metadata":{"time":1734535470807,"url":"http://localhost:4873/lodash/-/lodash-4.17.21.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/octet-stream; charset=utf-8","date":"Wed, 18 Dec 2024 15:24:30 GMT"},"options":{"compress":true}}}

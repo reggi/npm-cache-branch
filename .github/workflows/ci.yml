@@ -21,8 +21,31 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: Config registry
-        run: sh ./module_cache/steps/4.depless-install.sh
+      - name: Cache npm
+        id: cache-npm
+        uses: actions/cache@v2
+        with:
+          path: .npm/cache
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Download npm cache artifact if cache miss
+        if: steps.cache-npm.outputs.cache-hit != 'true'
+        uses: actions/download-artifact@v2
+        with:
+          name: npm-cache
+          path: .npm/cache
+
+      - name: Install dependencies
+        run: npm install --cache .npm/cache
+
+      - name: Save npm cache as artifact
+        if: steps.cache-npm.outputs.cache-hit != 'true'
+        uses: actions/upload-artifact@v2
+        with:
+          name: npm-cache
+          path: .npm/cache
 
       - name: Run tests
         run: npm test

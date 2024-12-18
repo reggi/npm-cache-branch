@@ -1,2 +1,0 @@
-
-4eff3eaf52cd232a0bf2e5b10cc2e52156cb9eb5	{"key":"make-fetch-happen:request-cache:http://localhost:4873/semver/-/semver-7.6.3.tgz","integrity":"sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==","time":1734535470854,"size":27678,"metadata":{"time":1734535470844,"url":"http://localhost:4873/semver/-/semver-7.6.3.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/octet-stream; charset=utf-8","date":"Wed, 18 Dec 2024 15:24:30 GMT"},"options":{"compress":true}}}
