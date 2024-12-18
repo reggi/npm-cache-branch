@@ -1,0 +1,1020 @@
+{
+	"name": "@verdaccio/signature",
+	"versions": {
+		"6.0.0-6-next.2": {
+			"name": "@verdaccio/signature",
+			"version": "6.0.0-6-next.2",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/signature@6.0.0-6-next.2",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "2df445354e0857daa6dd7a6b744a36d570a4602d",
+				"tarball": "https://registry.npmjs.org/@verdaccio/signature/-/signature-6.0.0-6-next.2.tgz",
+				"fileCount": 39,
+				"integrity": "sha512-aFvMbxxHzJCpPmqSgVuQYvYN2RP11CoSEcTXikkyb1zF4Uf3cOy53zUZ1Y7iOKCRYTgWrmet9KP7+24e44GHxg==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCKsbdCoNwAcaeunNGMmO0DuRoG8/FXOUB3wtILl0cCTAIhAJKFr5TmiXu/DaPr28U+mJCWlPnnAlHWMi+R5yH+f7us",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 40353,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJj/Q4oACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmrfrg//T4Ax85L2drCHfOelzLeupIZ4P928r6sBRB9Te3cm0UsQFMmT\r\nKkyH94IUKWlZBuP5+KLrOSBFKiwLZvgmmfjxA2Y/AOQ5z8TJae8ojrZbcMyl\r\nNhTlux1DJEL41HpHxB0pZBor7Yypv4pW5TCeKm1SJz7tsAXMwqt/lkhhR7+X\r\noqGw/bdifgzaIXnT9w5VxbYRhYwKV9II4XJVvqc3+WHLAp257saMmJ7deAZn\r\nlHMcW+k54psJKHMWQpMM70vyDjabfwQeTNAU9At6UGfo7H0TAL9jN+XEu/gi\r\nJuYdmc2advJCcBf8NoV0yAJqKjJN9/z0qJ8OnEwwE0gcCfQi/k7uSLDO8Rg6\r\ngprtNctA5XdB6+zN6TiMYyofxBh8VkIGx+hGJirM2geMygLEaLWQlvzF9wEf\r\n30c85FHm6ahoq4WaLhp7bS5IowOy5piMAuGu69diUe9n6w/S1snmqhiVY64G\r\nqTJhE/eah9eOgnwucEva4f+JX6mCbhL0Px6jHmx5pzMvnh6531udfiKhOArb\r\nxGztx5UdTHcr4pB7hKh7sxXZZg+Xb5rHHEdzqPNpPNeh+JGcCACZ1uaxP9GI\r\nM5KIo0HxZmrQ/ETKMUrNIgSZBPiy0NBOjm9d5HP/SA9OJo+7WbClAU4PRlrY\r\nZmLHwG2cV+zvIvRcyPnhmoM82rE2YsMOF0U=\r\n=u6Ag\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-signature-6.0.0-6-next.2.tgz",
+			"types": "build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.18",
+			"description": "verdaccio signature utils",
+			"directories": {},
+			"_nodeVersion": "14.21.3",
+			"dependencies": {
+				"debug": "4.3.4",
+				"lodash": "4.17.21",
+				"jsonwebtoken": "9.0.0"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"@verdaccio/types": "11.0.0-6-next.22",
+				"@verdaccio/config": "6.0.0-6-next.63"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/signature_6.0.0-6-next.2_1677528616415_0.5160199117306581",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.0": {
+			"name": "@verdaccio/signature",
+			"version": "7.0.0-next.0",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/signature@7.0.0-next.0",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "9507b6787c44f1c2f27cf608d12621ea7610d61b",
+				"tarball": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next.0.tgz",
+				"fileCount": 39,
+				"integrity": "sha512-9e28xxd/eH1qRd+I+U0QO0af7F+MEFMtcrRapcqYIayk8yGq03cEGoj18LIf+LXyAosu18Y5dTporPz/R6geHg==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDyM37pToVBq+QXX8ABJoWS9fcj8DVs2BmmfsZva9/KMgIhAIplLc8vwoTGQg5BdlOrwjk5wmApSIbkdnJU3W6F8kkH",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 42915
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-signature-7.0.0-next.0.tgz",
+			"types": "build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/6d64f6650803e7a728b2b82cff3c8a5d/verdaccio-signature-7.0.0-next.0.tgz",
+			"_integrity": "sha512-9e28xxd/eH1qRd+I+U0QO0af7F+MEFMtcrRapcqYIayk8yGq03cEGoj18LIf+LXyAosu18Y5dTporPz/R6geHg==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "verdaccio signature utils",
+			"directories": {},
+			"_nodeVersion": "16.20.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"lodash": "4.17.21",
+				"jsonwebtoken": "9.0.0"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"@verdaccio/types": "12.0.0-next.0",
+				"@verdaccio/config": "7.0.0-next.0"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/signature_7.0.0-next.0_1692632788330_0.462430841383368",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.1": {
+			"name": "@verdaccio/signature",
+			"version": "7.0.0-next.1",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/signature@7.0.0-next.1",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "31b1648e489cc849e37e991c76260ccf7f0d5943",
+				"tarball": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next.1.tgz",
+				"fileCount": 39,
+				"integrity": "sha512-uq6divC36rcwyBd6+JeTJXQ9K7d4Kuh7HNg6ZMU4ItSCYkLHJjVqNC2Kzo/SdkYNOd11xJuNlYU8NNuhpqpVuw==",
+				"signatures": [
+					{
+						"sig": "MEUCIC+jJs9mkuAOus+RD2ca1qgH7BGDf0EFvDWvcOhMQ97AAiEA9YVVPL3Yri6nDiXWMEN5YihkhhQGWdUy8PydSnVYHjA=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 43677
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-signature-7.0.0-next.1.tgz",
+			"types": "build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/0ed1d52ed9e4695ccbee0847fbf64cdf/verdaccio-signature-7.0.0-next.1.tgz",
+			"_integrity": "sha512-uq6divC36rcwyBd6+JeTJXQ9K7d4Kuh7HNg6ZMU4ItSCYkLHJjVqNC2Kzo/SdkYNOd11xJuNlYU8NNuhpqpVuw==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.1.0",
+			"description": "verdaccio signature utils",
+			"directories": {},
+			"_nodeVersion": "20.8.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"lodash": "4.17.21",
+				"jsonwebtoken": "9.0.2"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"@verdaccio/types": "12.0.0-next.1",
+				"@verdaccio/config": "7.0.0-next.3"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/signature_7.0.0-next.1_1697317172539_0.27744503160035006",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.2": {
+			"name": "@verdaccio/signature",
+			"version": "7.0.0-next.2",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/signature@7.0.0-next.2",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "d0665230a3ce784ee15aa45df26ce75f3294ad03",
+				"tarball": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next.2.tgz",
+				"fileCount": 39,
+				"integrity": "sha512-rxoSmdKrSJZEoSsWKjgytpqf2Bltbs6sR5Hflu8xXfPZPmHpXkGgAdb8tuSlnmjzo6hXoKfje8b9BJoP2bDwbA==",
+				"signatures": [
+					{
+						"sig": "MEQCID9Hl6+RuAVEueVZ0VAM73sIRZyFFcZPxvIk+NCsUwsiAiBPzhKRZimk9CaXUcBUtT8/e4pA3n6rqMnHkrSCuK6kuQ==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 43384
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-signature-7.0.0-next.2.tgz",
+			"types": "build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/7c344e0fe42d2bc05f4c247538dc0291/verdaccio-signature-7.0.0-next.2.tgz",
+			"_integrity": "sha512-rxoSmdKrSJZEoSsWKjgytpqf2Bltbs6sR5Hflu8xXfPZPmHpXkGgAdb8tuSlnmjzo6hXoKfje8b9BJoP2bDwbA==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.1.0",
+			"description": "verdaccio signature utils",
+			"directories": {},
+			"_nodeVersion": "20.9.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"lodash": "4.17.21",
+				"jsonwebtoken": "9.0.2"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"@verdaccio/types": "12.0.0-next.1",
+				"@verdaccio/config": "7.0.0-next.4"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/signature_7.0.0-next.2_1698506979886_0.8742130366653487",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.3": {
+			"name": "@verdaccio/signature",
+			"version": "7.0.0-next.3",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/signature@7.0.0-next.3",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "a74c7d352c365b6d73a65b23c9772f6439c59010",
+				"tarball": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next.3.tgz",
+				"fileCount": 39,
+				"integrity": "sha512-egs1VmEe+COUUZ83I6gzDy79Jo3b/AExPvp9EDuJHkmwxJj+9gb231Rv4wk+UoNPrQRNLljUepQwVrDmbqP5DQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDHETgrqYQ4IAx75GbMqb3OQ9pObG/vSAJI4c9qiu0TJgIhAP9xSWsSMU5eEqknhyvjLHaMD1/iIVjr/foXR2kbeVEa",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 43389
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-signature-7.0.0-next.3.tgz",
+			"types": "build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/74a0a5bfdb7603772c03c3b7be78efc8/verdaccio-signature-7.0.0-next.3.tgz",
+			"_integrity": "sha512-egs1VmEe+COUUZ83I6gzDy79Jo3b/AExPvp9EDuJHkmwxJj+9gb231Rv4wk+UoNPrQRNLljUepQwVrDmbqP5DQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.3",
+			"description": "verdaccio signature utils",
+			"directories": {},
+			"_nodeVersion": "20.10.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"jsonwebtoken": "9.0.2"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"@verdaccio/types": "12.0.0-next.2",
+				"@verdaccio/config": "7.0.0-next.5"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/signature_7.0.0-next.3_1704031089448_0.6527111642399741",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.4": {
+			"name": "@verdaccio/signature",
+			"version": "7.0.0-next-7.4",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/signature@7.0.0-next-7.4",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "1df4c476742fce40e0f09b1e35ee1df99fd4bd61",
+				"tarball": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next-7.4.tgz",
+				"fileCount": 48,
+				"integrity": "sha512-czNZWcPCTKjWKT26VBU+g0tdxI/C1FLLzXxEtt1T/nQZRNgHDLZH0xjFp9zx1nnys4tFUCXIh/S5r+u0agF6KQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIH4IbOOZ0YnNk2nBgc3ebrukFvX63c12Bj0uru/VhnP7AiEA7zXpqaXcTSZpu6eFjzezwMeguKLQcXxuwsRZ9uylPl8=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 54215
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-signature-7.0.0-next-7.4.tgz",
+			"types": "build/index.d.ts",
+			"engines": {
+				"node": ">=14"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/00f5c43b345f763186274249729d52a7/verdaccio-signature-7.0.0-next-7.4.tgz",
+			"_integrity": "sha512-czNZWcPCTKjWKT26VBU+g0tdxI/C1FLLzXxEtt1T/nQZRNgHDLZH0xjFp9zx1nnys4tFUCXIh/S5r+u0agF6KQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.5.0",
+			"description": "verdaccio signature utils",
+			"directories": {},
+			"_nodeVersion": "20.12.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"jsonwebtoken": "9.0.2",
+				"evp_bytestokey": "1.0.3"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"@verdaccio/types": "12.0.0-next.2",
+				"@verdaccio/config": "7.0.0-next-7.14"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/signature_7.0.0-next-7.4_1714720586928_0.19665114352312774",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.5": {
+			"name": "@verdaccio/signature",
+			"version": "7.0.0-next-7.5",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/signature@7.0.0-next-7.5",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "0e823075541938389e6d5a745323f35ded700aa8",
+				"tarball": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next-7.5.tgz",
+				"fileCount": 39,
+				"integrity": "sha512-xF0xGi10HOAQ7Mkwf6dC2fjaBrdxxqXE/HMh/l/O5/LpWoGFZ6xsm/3ZieVRJtIq/qvL5pmmO5Tn8lPS7pm5SQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIGwBb19RcVy/lSP/vl3/lsS5qxTiX2duZMPIO/pcZEVHAiEAixLaGE8g60KzKor4nzUPSIGacKv4ratrHnnApDXcO3I=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 46102
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-signature-7.0.0-next-7.5.tgz",
+			"types": "build/index.d.ts",
+			"engines": {
+				"node": ">=14"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/3963bc37f027b0107ae0e549bdbca94d/verdaccio-signature-7.0.0-next-7.5.tgz",
+			"_integrity": "sha512-xF0xGi10HOAQ7Mkwf6dC2fjaBrdxxqXE/HMh/l/O5/LpWoGFZ6xsm/3ZieVRJtIq/qvL5pmmO5Tn8lPS7pm5SQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.5.0",
+			"description": "verdaccio signature utils",
+			"directories": {},
+			"_nodeVersion": "20.12.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"jsonwebtoken": "9.0.2"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"@verdaccio/types": "12.0.0-next-7.3",
+				"@verdaccio/config": "7.0.0-next-7.15"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/signature_7.0.0-next-7.5_1714922022338_0.5337883502159486",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"8.0.0-next-8.0": {
+			"name": "@verdaccio/signature",
+			"version": "8.0.0-next-8.0",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/signature@8.0.0-next-8.0",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "66983d04c45ad98865671aeb5b3b5f0cb60d570d",
+				"tarball": "https://registry.npmjs.org/@verdaccio/signature/-/signature-8.0.0-next-8.0.tgz",
+				"fileCount": 38,
+				"integrity": "sha512-klcc2UlCvQxXDV65Qewo2rZOfv7S1y8NekS/8uurSaCTjU35T+fz+Pbqz1S9XK9oQlMp4vCQ7w3iMPWQbvphEQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQC/kbVYS7TC/dYGDUWpSAoYZnF3XBWSEombe9unnv1I+AIhALyvG021UROS15L6KhxEKcsxBn+7dcXUse7Dt70oUEyH",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 46750
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-signature-8.0.0-next-8.0.tgz",
+			"types": "build/index.d.ts",
+			"engines": {
+				"node": ">=14"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "vitest run",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/94b6fec672d871ab538feac42482c12d/verdaccio-signature-8.0.0-next-8.0.tgz",
+			"_integrity": "sha512-klcc2UlCvQxXDV65Qewo2rZOfv7S1y8NekS/8uurSaCTjU35T+fz+Pbqz1S9XK9oQlMp4vCQ7w3iMPWQbvphEQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.8.2",
+			"description": "verdaccio signature utils",
+			"directories": {},
+			"_nodeVersion": "20.17.0",
+			"dependencies": {
+				"debug": "4.3.7",
+				"jsonwebtoken": "9.0.2"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"@verdaccio/types": "13.0.0-next-8.0",
+				"@verdaccio/config": "8.0.0-next-8.0"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/signature_8.0.0-next-8.0_1726165347325_0.27276820529313905",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"8.0.0-next-8.1": {
+			"name": "@verdaccio/signature",
+			"version": "8.0.0-next-8.1",
+			"description": "verdaccio signature utils",
+			"main": "./build/index.js",
+			"types": "build/index.d.ts",
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"repository": {
+				"type": "https",
+				"url": "git+https://github.com/verdaccio/verdaccio.git"
+			},
+			"license": "MIT",
+			"homepage": "https://verdaccio.org",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"engines": {
+				"node": ">=18"
+			},
+			"dependencies": {
+				"jsonwebtoken": "9.0.2",
+				"debug": "4.3.7"
+			},
+			"devDependencies": {
+				"@verdaccio/config": "8.0.0-next-8.2",
+				"@verdaccio/types": "13.0.0-next-8.1"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/verdaccio"
+			},
+			"scripts": {
+				"clean": "rimraf ./build",
+				"test": "vitest run",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"watch": "pnpm build:js -- --watch",
+				"build": "pnpm run build:js && pnpm run build:types"
+			},
+			"_id": "@verdaccio/signature@8.0.0-next-8.1",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"_integrity": "sha512-lHD/Z2FoPQTtDYz6ZlXhj/lrg0SFirHrwCGt/cibl1GlePpx78WPdo03tgAyl0Qf+I35n484/gR1l9eixBQqYw==",
+			"_resolved": "/tmp/27bfe64c8fce205874bd94c54d703cd5/verdaccio-signature-8.0.0-next-8.1.tgz",
+			"_from": "file:verdaccio-signature-8.0.0-next-8.1.tgz",
+			"_nodeVersion": "20.17.0",
+			"_npmVersion": "10.8.2",
+			"dist": {
+				"integrity": "sha512-lHD/Z2FoPQTtDYz6ZlXhj/lrg0SFirHrwCGt/cibl1GlePpx78WPdo03tgAyl0Qf+I35n484/gR1l9eixBQqYw==",
+				"shasum": "3d26b88be7de1746ebd4990e15d25b3423ac5be0",
+				"tarball": "https://registry.npmjs.org/@verdaccio/signature/-/signature-8.0.0-next-8.1.tgz",
+				"fileCount": 38,
+				"unpackedSize": 46676,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDiBkIflWKoo4zz22UGkEc2aG4vgUpbaKXU4zyoBRnjtwIhAItLA78MZ82razB+9pX5djeYmeNJOhYNCloxoRZVXlQ4"
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"directories": {},
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/signature_8.0.0-next-8.1_1727299454574_0.8871025691399324"
+			},
+			"_hasShrinkwrap": false,
+			"contributors": []
+		}
+	},
+	"time": {
+		"created": "2023-02-27T20:10:16.358Z",
+		"modified": "2024-09-25T21:24:15.027Z",
+		"6.0.0-6-next.2": "2023-02-27T20:10:16.620Z",
+		"7.0.0-next.0": "2023-08-21T15:46:28.548Z",
+		"7.0.0-next.1": "2023-10-14T20:59:32.754Z",
+		"7.0.0-next.2": "2023-10-28T15:29:40.095Z",
+		"7.0.0-next.3": "2023-12-31T13:58:09.634Z",
+		"7.0.0-next-7.4": "2024-05-03T07:16:27.109Z",
+		"7.0.0-next-7.5": "2024-05-05T15:13:42.541Z",
+		"8.0.0-next-8.0": "2024-09-12T18:22:27.512Z",
+		"8.0.0-next-8.1": "2024-09-25T21:24:14.810Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"6-next": "6.0.0-6-next.2",
+		"latest": "6.0.0-6-next.2",
+		"next": "7.0.0-next.3",
+		"next-7": "7.0.0-next-7.5",
+		"next-8": "8.0.0-next-8.1"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"32610c3c5dfe2458621f48024a862519\"",
+			"fetched": 1734468643116
+		}
+	},
+	"_distfiles": {
+		"signature-6.0.0-6-next.2.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/signature/-/signature-6.0.0-6-next.2.tgz",
+			"sha": "2df445354e0857daa6dd7a6b744a36d570a4602d",
+			"registry": "npmjs"
+		},
+		"signature-7.0.0-next.0.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next.0.tgz",
+			"sha": "9507b6787c44f1c2f27cf608d12621ea7610d61b",
+			"registry": "npmjs"
+		},
+		"signature-7.0.0-next.1.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next.1.tgz",
+			"sha": "31b1648e489cc849e37e991c76260ccf7f0d5943",
+			"registry": "npmjs"
+		},
+		"signature-7.0.0-next.2.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next.2.tgz",
+			"sha": "d0665230a3ce784ee15aa45df26ce75f3294ad03",
+			"registry": "npmjs"
+		},
+		"signature-7.0.0-next.3.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next.3.tgz",
+			"sha": "a74c7d352c365b6d73a65b23c9772f6439c59010",
+			"registry": "npmjs"
+		},
+		"signature-7.0.0-next-7.4.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next-7.4.tgz",
+			"sha": "1df4c476742fce40e0f09b1e35ee1df99fd4bd61",
+			"registry": "npmjs"
+		},
+		"signature-7.0.0-next-7.5.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/signature/-/signature-7.0.0-next-7.5.tgz",
+			"sha": "0e823075541938389e6d5a745323f35ded700aa8",
+			"registry": "npmjs"
+		},
+		"signature-8.0.0-next-8.0.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/signature/-/signature-8.0.0-next-8.0.tgz",
+			"sha": "66983d04c45ad98865671aeb5b3b5f0cb60d570d",
+			"registry": "npmjs"
+		},
+		"signature-8.0.0-next-8.1.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/signature/-/signature-8.0.0-next-8.1.tgz",
+			"sha": "3d26b88be7de1746ebd4990e15d25b3423ac5be0",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {
+		"signature-8.0.0-next-8.1.tgz": {
+			"shasum": "3d26b88be7de1746ebd4990e15d25b3423ac5be0"
+		}
+	},
+	"_rev": "2-6684e0f90b02a78f",
+	"_id": "@verdaccio/signature",
+	"readme": ""
+}

@@ -1,0 +1,263 @@
+{
+	"name": "@verdaccio/local-storage-legacy",
+	"versions": {
+		"11.0.1": {
+			"name": "@verdaccio/local-storage-legacy",
+			"version": "11.0.1",
+			"description": "Local storage implementation",
+			"keywords": [
+				"plugin",
+				"verdaccio",
+				"storage",
+				"local-storage"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"homepage": "https://verdaccio.org",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/verdaccio/monorepo.git",
+				"directory": "plugins/local-storage"
+			},
+			"bugs": {
+				"url": "https://github.com/verdaccio/monorepo/issues"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"main": "lib/index.js",
+			"types": "lib/index.d.ts",
+			"engines": {
+				"node": ">=8"
+			},
+			"dependencies": {
+				"@verdaccio/core": "7.0.0-next-7.9",
+				"@verdaccio/file-locking": "10.3.1",
+				"@verdaccio/streams": "10.2.1",
+				"debug": "4.3.4",
+				"globby": "11.1.0",
+				"lodash": "4.17.21",
+				"lowdb": "1.0.0",
+				"mkdirp": "1.0.4"
+			},
+			"devDependencies": {
+				"@types/express": "^4.17.17",
+				"@types/minimatch": "^3.0.3",
+				"@types/node": "^20.5.8",
+				"@verdaccio/config": "7.0.0-next-7.9",
+				"@verdaccio/types": "12.0.0-next.2",
+				"minimatch": "^4.0.0",
+				"rmdir-sync": "^1.0.1"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/verdaccio"
+			},
+			"scripts": {
+				"clean": "rimraf ./build",
+				"test": "cross-env NODE_ENV=test BABEL_ENV=test jest",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json",
+				"build:js": "babel src/ --out-dir lib/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"build": "pnpm run build:js && pnpm run build:types"
+			},
+			"_id": "@verdaccio/local-storage-legacy@11.0.1",
+			"_integrity": "sha512-6hBsI2cqmbKAhTff7DN5PcZH3t4u7A4p26x5nrUiSLP7TCMBVGobLfaorJNNfAcTV0wpMP9jLfM9ZgnngR045A==",
+			"_resolved": "/tmp/9fd9b83b90add8a41749819d02b2e201/verdaccio-local-storage-legacy-11.0.1.tgz",
+			"_from": "file:verdaccio-local-storage-legacy-11.0.1.tgz",
+			"_nodeVersion": "16.20.2",
+			"_npmVersion": "8.19.4",
+			"dist": {
+				"integrity": "sha512-6hBsI2cqmbKAhTff7DN5PcZH3t4u7A4p26x5nrUiSLP7TCMBVGobLfaorJNNfAcTV0wpMP9jLfM9ZgnngR045A==",
+				"shasum": "34061b5ce34ccf5a181d21240ede4845e895e76b",
+				"tarball": "https://registry.npmjs.org/@verdaccio/local-storage-legacy/-/local-storage-legacy-11.0.1.tgz",
+				"fileCount": 24,
+				"unpackedSize": 104329,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDDFSLZs57V3sdt/W86Yaem52BakEM9L7iRyKofBt9zdwIgaCwMKuaTHpcS58Ru+u0yErHg4N+lx0fPXm2AhF8vz18="
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"directories": {},
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/local-storage-legacy_11.0.1_1710630487990_0.961427646041761"
+			},
+			"_hasShrinkwrap": false,
+			"contributors": []
+		},
+		"11.0.2": {
+			"name": "@verdaccio/local-storage-legacy",
+			"version": "11.0.2",
+			"description": "Local storage implementation",
+			"keywords": [
+				"plugin",
+				"verdaccio",
+				"storage",
+				"local-storage"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"homepage": "https://verdaccio.org",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/verdaccio/monorepo.git",
+				"directory": "plugins/local-storage"
+			},
+			"bugs": {
+				"url": "https://github.com/verdaccio/monorepo/issues"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"main": "lib/index.js",
+			"types": "lib/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"dependencies": {
+				"@verdaccio/commons-api": "10.2.0",
+				"@verdaccio/file-locking": "10.3.1",
+				"@verdaccio/streams": "10.2.1",
+				"debug": "4.3.4",
+				"async": "3.2.4",
+				"lodash": "4.17.21",
+				"lowdb": "1.0.0",
+				"mkdirp": "1.0.4"
+			},
+			"devDependencies": {
+				"@types/minimatch": "^3.0.3",
+				"@types/node": "^20.5.8",
+				"@verdaccio/legacy-types": "1.0.1",
+				"minimatch": "^4.0.0",
+				"rmdir-sync": "^1.0.1"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/verdaccio"
+			},
+			"scripts": {
+				"clean": "rimraf ./build",
+				"test": "cross-env NODE_ENV=test BABEL_ENV=test jest",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json",
+				"build:js": "babel src/ --out-dir lib/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"build": "pnpm run build:js && pnpm run build:types"
+			},
+			"_id": "@verdaccio/local-storage-legacy@11.0.2",
+			"_integrity": "sha512-7AXG7qlcVFmF+Nue2oKaraprGRtaBvrQIOvc/E89+7hAe399V01KnZI6E/ET56u7U9fq0MSlp92HBcdotlpUXg==",
+			"_resolved": "/tmp/ff3ac5df6ddb486ee609a595f5b745cf/verdaccio-local-storage-legacy-11.0.2.tgz",
+			"_from": "file:verdaccio-local-storage-legacy-11.0.2.tgz",
+			"_nodeVersion": "16.20.2",
+			"_npmVersion": "8.19.4",
+			"dist": {
+				"integrity": "sha512-7AXG7qlcVFmF+Nue2oKaraprGRtaBvrQIOvc/E89+7hAe399V01KnZI6E/ET56u7U9fq0MSlp92HBcdotlpUXg==",
+				"shasum": "facfec7f355892c8248fd69a16d735c0ec26a44e",
+				"tarball": "https://registry.npmjs.org/@verdaccio/local-storage-legacy/-/local-storage-legacy-11.0.2.tgz",
+				"fileCount": 21,
+				"unpackedSize": 96569,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDwxL2/WnA3tTW/MrVHP9gSzsMG/37Dzl6QTsDerNHCAwIhANK4PYqFIWUTEc6UDP3UsEZwhef4aNXEGG1II8vlMMKW"
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"directories": {},
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/local-storage-legacy_11.0.2_1710633332848_0.4478069262944975"
+			},
+			"_hasShrinkwrap": false,
+			"contributors": []
+		}
+	},
+	"time": {
+		"created": "2024-03-16T23:08:07.880Z",
+		"11.0.1": "2024-03-16T23:08:08.146Z",
+		"modified": "2024-03-16T23:55:33.463Z",
+		"11.0.2": "2024-03-16T23:55:32.993Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "11.0.2"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"cfee1ebd2833a98ffb62c4e17ad3516d\"",
+			"fetched": 1734468643471
+		}
+	},
+	"_distfiles": {
+		"local-storage-legacy-11.0.1.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/local-storage-legacy/-/local-storage-legacy-11.0.1.tgz",
+			"sha": "34061b5ce34ccf5a181d21240ede4845e895e76b",
+			"registry": "npmjs"
+		},
+		"local-storage-legacy-11.0.2.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/local-storage-legacy/-/local-storage-legacy-11.0.2.tgz",
+			"sha": "facfec7f355892c8248fd69a16d735c0ec26a44e",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {
+		"local-storage-legacy-11.0.2.tgz": {
+			"shasum": "facfec7f355892c8248fd69a16d735c0ec26a44e"
+		}
+	},
+	"_rev": "2-4586f94ca5c6f54a",
+	"_id": "@verdaccio/local-storage-legacy",
+	"readme": "# @verdaccio/local-storage-legacy\n\n> Only used by 5.x versions\n\n📦 File system storage plugin for verdaccio \n\n[![verdaccio (latest)](https://img.shields.io/npm/v/@verdaccio/local-storage/latest.svg)](https://www.npmjs.com/package/@verdaccio/local-storage)\n[![CircleCI](https://circleci.com/gh/verdaccio/local-storage/tree/master.svg?style=svg)](https://circleci.com/gh/verdaccio/local-storage/tree/master)\n[![Known Vulnerabilities](https://snyk.io/test/github/verdaccio/local-storage/badge.svg?targetFile=package.json)](https://snyk.io/test/github/verdaccio/local-storage?targetFile=package.json)\n[![codecov](https://codecov.io/gh/verdaccio/local-storage/branch/master/graph/badge.svg)](https://codecov.io/gh/verdaccio/local-storage)\n[![backers](https://opencollective.com/verdaccio/tiers/backer/badge.svg?label=Backer&color=brightgreen)](https://opencollective.com/verdaccio)\n[![discord](https://img.shields.io/discord/388674437219745793.svg)](http://chat.verdaccio.org/)\n![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)\n[![node](https://img.shields.io/node/v/@verdaccio/local-storage/latest.svg)](https://www.npmjs.com/package/@verdaccio/local-storage)\n\n> This package is already built-in in verdaccio\n\n```\nnpm install @verdaccio/local-storage\n```\n\n### API\n\n### LocalDatabase\n\nThe main object that handle a JSON database the private packages.\n\n#### Constructor\n\n```\nnew LocalDatabase(config, logger);\n```\n\n* **config**: A verdaccio configuration instance.\n* **logger**: A logger instance\n\n### LocalFS\n\nA class that handle an package instance in the File System\n\n```\nnew LocalFS(packageStoragePath, logger);\n```\n\n\n\n## License\nVerdaccio is [MIT licensed](https://github.com/verdaccio/local-storage/blob/master/LICENSE).\n\n\n[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fverdaccio%2Flocal-storage.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fverdaccio%2Flocal-storage?ref=badge_large)"
+}

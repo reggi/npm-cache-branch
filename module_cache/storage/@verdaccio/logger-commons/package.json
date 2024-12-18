@@ -1,0 +1,5513 @@
+{
+	"name": "@verdaccio/logger-commons",
+	"versions": {
+		"6.0.0-6-next.25": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.25",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.25",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "3fff25d45ff4aa4461f96ba5af264bd5e508a204",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.25.tgz",
+				"fileCount": 17,
+				"integrity": "sha512-5CkeMB9yNkk1nvTM1A0J7Q22yw+uONmturXrNXprdWdL1RArSehu8zk8zdR0gwETT0hxr8keMDHZMbPF+LId/Q==",
+				"signatures": [
+					{
+						"sig": "MEQCIAGuf4cjsYfiInuNiwAEBw7CY1AaQucueLpg66h5pB+SAiBoCyU9mEF2Ptr4WBOjQt2UEvLMFa51YAJytRGTE6VA7w==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37083,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJj4BKkACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmp6Iw/+Kw1Y2phHa3tbZh4Vrot+8thj62gdKI5jMm76kbKqNM/2h5Gt\r\nHfduuI9BHtNtKCFhFm2H9kDxSAs/ASroeKHMueOKVBcSqCm/0czeAA2x0u6Z\r\nws5kcAqEbfXCOiH5BJAKRoF9HcakPVfyIMGIMT8vHf4wHapc5WUoWlNp7HH1\r\n8ZYk+YMaHivtzusQ9wGUfiWvanPEvy1xRzqQfR+PDtADX9PbcJBStzuEcWov\r\nZnZcoUUonif8TgeW8md6uL1ADRbtnnOzdPzwLN19iNLeliKSChDst+54/BkP\r\npatCfjWgOIUOkagKIiJpXg4A1BeIhgerKKaU/LzoF4EVM0/00ydcztfInrWw\r\nWcKqFumH8BCdrhFMckyBkxIonAel1j31kKwItppaYTMrj2allbfNfidHVzLB\r\ntvwte46YLjOfz9KxOqggNbS1auTMzuj8B9VcoIly3M0J/2QIwWZVhCj0CFdv\r\nMwm0Ugrz1y3uJbI5Cj+63pzgsv7WXh4D0tszxFiA1GoiylURwk9aMu3Itu+D\r\nxbrXsO4JwPaDAdHPr7QsxYjb8WQFo0HZE5p8LWCzYVQbLZ/YHB6Th+/7BLKA\r\naLVhd8oMLzQctVYMZoccn/RIFIqffTQdvpvZ0XcmQgIgTUD0rLwrjskYiWe7\r\nbNgzMGsHhT0BmmoUKX1qEjxj0bkNkwnLsvQ=\r\n=s843\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.25.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.17",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.57",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.8"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.8.0",
+				"@verdaccio/types": "11.0.0-6-next.19"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.25_1675629220265_0.13503213745039355",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.26": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.26",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.26",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "f42446e66eb48b76e599172288b1391470a15fdd",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.26.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-TX/dwxy3UtjAArYcYFvlfJ0igJjKKuuDipOJMPNkfsH3s6f/G7IcbIVyjsk/ZSGNwet6fHA8KHIBvO0fHFKxjw==",
+				"signatures": [
+					{
+						"sig": "MEUCIDcjyHDqdgNd/zF5giw/gUCYXMlFrRRgKgXYIiP+iIFSAiEA2DFW7R7xEtcREk43L3knp1Tg0Cbe8qXYnjpsfWNnsCg=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37185,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJj4BoNACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrkEA//Tx9RiHmEGl56nyCYiFgY1qayVrSu1x1KMtcvgu/gWsjEAG6S\r\nXTAIeWZaLvx8MFfy4zGYbuqTniyBstoIMdmc6xiE/6pSjLPC9vzSEHb9UN21\r\nAqT54kGBIYtjCRNoag6s3EihtfF7NGDxQWOnGWvnptPGgi5flptT3tR/GB24\r\niUp2g8Vx+5rsXiRW+P3fRUUabWXMl1kyhblGJvFgjZQQ0oXF5pMDIu+44kxV\r\nvzmsm6aLcn3DrmJjFEDNLS9vWdryzJKUXggm+I7r27/4SNLA3yOI46Hzx6QB\r\nUS4U9mkKAYWlAcv86w1ugllMTgwfMriovF3vKJW3Lznyfgw1PHXkt6NoGsCp\r\n+1zI6v1YETmC+PuiJsJTTs2eIrts1CYvx17NSQGYfeufNx1w1OLhMGBZX7wj\r\nDj0PSNW4CVoWRI5Lwd0v4JId/M9LwOZNvWvZFYSNvxx6Tw24y/wSoi4slQ4D\r\nQAuICFRhpNQihq2eS0JVBZFWJf8+GdfcmTahLHDVk+v+3z83o8k4pjqJFoD6\r\n9CFpM0Nvb50Qn5rtuFf7LMxZ1f9cMFJMdkzRYPlIka+ByW2xiz/TnotayRci\r\nT76TFUfzwEjuVCdFetf3h8XsXWxeiizzlUuI6FS8769j2IDGESUf0rAXq80Z\r\ns3sOkVBMESiaItMHdY5WHoTTjOom8B8oDGY=\r\n=pXCE\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.26.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.17",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.58",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.8"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.8.0",
+				"@verdaccio/types": "11.0.0-6-next.19"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.26_1675631117648_0.21474333975537774",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.27": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.27",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.27",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "64c815286af28708d9bf10e9cf15fd8d8604bc23",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.27.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-gMG/MMXvJBXbSDwG0E0giRGW9WKvPHz98J7ewylo7PWZrStVQh6rCZQM4FghcodcfyXq3zGY/UrJ2gyjtORPOg==",
+				"signatures": [
+					{
+						"sig": "MEQCIG71j2ux66gCerW5w+sPef8avBSC0guecq6ByaP0b37QAiBo36UqGs2yepx0VhfXi/GxHvwyXsOPJZvUpQUxOBIzyA==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37374,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJj4I8xACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmqjCg//cOrBIB9kMVB1LUz2kcwghjp3ZFRf71mCprjTfMOKV63Zw/KT\r\nsAWrRcgU9GMj/prLoglSSiMQHG9dtZqdWl9bbkagr8dA2zIkL0voIhRJvqKB\r\nlhx7K/FN9cjvK2JJ4Oq5myr5pQkUN+9mldhoDdH5/J4Qm12S8n8UxoMTBqwD\r\nOXDgLLp6lp5aLMsiMSzRIMULwF5YWlcOFbn4nHjZM+BYtHLQBmsRBns+f2pu\r\nPC0Qh9AVB664/79jzLoQzbHNaqKNMVZjHK3/fF15ZIpqgQwUa5UF8OFF+sdb\r\nIRirCKtNS1UspIM/qyj9iAJIDPYsfVzBSL2nFfVEaQqUQ5VjwwuLVZm3Ziwc\r\n+gzODIX5ngGDQKr0ecrJs3OGT9bfSKV6AUsz589JiGw4U3SGgJwIs8MVCCq1\r\nSMmIwYr8F6UxselOz881ARUeCq50APgeol4oerT8lri6CYuf8r3vCvrVpT9t\r\nISUK7vCRGPalgaRCZ7HCn4AgFfGPdDPtq2kw5gXhMM3hAcdwnvrYS3CCuHIs\r\ndci83IufqzJJef10jCfp2n8Zx9JBGBtxCnjEqjfTqXDUd3DVXFU3QVhNr93r\r\nCjx8lGRcAu9B+qYvYRLtWF935h19avdMKr4UU/Cm8l685r0BFZi/Ba5TVKXA\r\nTAeQJ6Fhj9mCVbL0zsxSK8C4zCTkf6BcuGs=\r\n=BvJq\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.27.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.17",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.59",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.8.0",
+				"@verdaccio/types": "11.0.0-6-next.19"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.27_1675661105763_0.8243931386203793",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.28": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.28",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.28",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "73e27436743ad15cdc2ef887a0f17b583efd0115",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.28.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-p6Ex1XMbNZF9EelNTkPNnmn2fVLWuFHsZ3ixC9Jk2keVQtTqp5ttJM+TblYYT6/2h7of6QkmRSnhZzie3T8++A==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDu9GdHp2FSL1aATJAUaW2Sa475WdREbMDo63mSGlLXKwIhAMYvSQqIowmQkt5GFbOI31sKWz57NwUVG3/io5p1ARgc",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37448,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJj67pBACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmqPvQ//TF3a5nHNRaKvb+5zjCssUUMbtgtmGqf7fYsowKY463gRC4/V\r\n+j0Zrh5qqNsxW6fY+QfagWfgEi6eUcHVA5ZkX9JcV5K126Yi8jxDt1kSIFk0\r\nPQC/TvmQgGYVUoO8hLDx/Re8CrRkNXLTBF+aLMPAr8EuBYwykTw0NJ2htN/s\r\nahkzVkRK3rga4baypRtMPAPUUB/Oz78qYMjRyUhiVAmQXT2VCB1zfrd5fcfs\r\nzA2NoKyfAL8OtkkBZeyVEAwPrkOkdzj2zTrFdi5qWpXIPDsxT2KAXpzoF/K1\r\n2u9E9zzgd0H7ex1h7NPGwmr0pmokJ7wPmOShYRxySq/JEjHrYNEnbFtAHyYI\r\nGuzMP03At04t0XZTNarvPchIiyIqTzQkLPwxcguX5Z6AO5eGVR/x2Jk9IaSo\r\nlv+S9AAaT31jbQ4MCrE7oqDr11Tdwkb/tFhYm0nYW8nANPBbZ6OofIxOJO0V\r\nCGwDH3hPnilvA3mYvygQJF3Kv3Hm7sc/ZjCVlDIqBsLsyaLZFs2bsahPivzW\r\nfgYoo156O4L4W6s7dZUFz8HM87jZK6RW2hqJhit14rCVV9oWo++eIL3ys6u5\r\ndF1yr7JN58dgmwMrHUWXhxRtNEmxk9zj54ovrIvX7cwuo3MjJ4BB7zopGZWZ\r\nh4oakTdODYXd+2FTksCJY7oniDOfUdhpkRc=\r\n=ZjRh\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.28.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.17",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.60",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.8.0",
+				"@verdaccio/types": "11.0.0-6-next.20"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.28_1676393025251_0.9458244335522448",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.29": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.29",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.29",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "a79f0f7e512bdf947d36c11ca1bbafac3aedbb15",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.29.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-7AFWin5Kgurprr+7B/swOX4vbNxDWl/yzHAe6spSN3GXheX6mjsbgu8msovXvu0ntqehyEWeSgI30lOnB4vjKQ==",
+				"signatures": [
+					{
+						"sig": "MEQCID+W3oDvNm4kGzG1t9wxjJV71Dn7cFYmS6YR/vyrlrbeAiAqJ7GwX34zvSjIPxYUM2CoyH7EtBC417/FiTsuZY4Z/w==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37522,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJj6/dBACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmouVw//ehXxBi37/JG0DTQhMMC8C4ADQjZEn10LfweUURJuQikADirq\r\nPOtqL8PMa8AaWeHhQ+GWDRXYh3IMx9HmabEFg6JKbEE5xk3p4Tu1g8WpbZ9V\r\nGaHx1BhibN+BJaI+9/5QDfofOHFNZNEN+1hU4YFUlWkJoj871/j4nJ3O3Kv2\r\ndOrLRYLnUhzZ+99rT4hKBc7ItGVvEB3tqOv/nORe7YnfGXsi+gR3l3hGJizY\r\nFBltSRsnuf6UPafXvWK+x5z3GeePZhmKMVMAhM8JJQuvT+rsLDr3G3OYM7nr\r\nTCipASztDsWTmDuWuQ9Jdu+CQRx4yNlKC9LSbw9auAx4QdkE3bjIo+LsrcsR\r\nWqrGQTELApH3Rz2of54TeOywFXmyb6CZFFDMqzc6dSUSCd7sJ/yNJU71dTjf\r\nikgKPr6+PPztLbkcIbneMcXqRftSeTFkq0gOjagBuwn7scHmm29NAy3uyda5\r\nSTB0+y0Qi8EbGIyv1wE0D3JixvznbTv+/BEiFCxV4YyNNX2H8SJR1dMDcu67\r\nzH0ZqHRxeBgqHdi4ZMPiBLdzQjNnQ0WFu2naqLjYYGNaKZrX/yZphsnk4Y19\r\nj9sSNVmnQbzFLvZE+bpQ641uLzWAR0adIqtlO8JJ1kM2SKKZrbxSBphoNmT3\r\nl/mtFCKmUFfws8Dw5Cn7dWSuq8ZlpPcsgWE=\r\n=6a22\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.29.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.17",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.61",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.8.0",
+				"@verdaccio/types": "11.0.0-6-next.20"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.29_1676408641470_0.8395896943810532",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.30": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.30",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.30",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "660a7bc98ced053a5174c769d4a7189477500b73",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.30.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-WDaQbMmktzr06bmGDzMnBLxm02ZvWegl908qWkO8trtrAkhlY8dji9n93H1I0fch8yZkmDqcwtyl8Yk1QROskg==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCh8qk2EBZVviXStO9JpNo2zwOcKFxJsJ+V/kkI+ON3cwIgd0xNNaG4NQSA3lFC2sVLUB3BLyva3oeX6s8eT5ZEoRk=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37633,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJj91nkACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpyUw/+O///aF7ewkuA+KPpHNOmYXjc8lIVIaVc6u03uOwh7Hi2dJ+5\r\nPENKKyFAwcqOVlepDFW9n9cHscUCeTk77MLh+B0VgDNGpDNYZjOly0l95Olt\r\nnVAnesfcdgB+ZbXAdJ8j4f4+McDu+ecVi3i6bE4gHlcWI5WbsxJSHWHYvm88\r\nJy3A0mg2GfZ1N7GFAcCShAxARZxHzyEnVXIXo2B/kxl5Qdp3dJAQUNhx+Yno\r\nIxDLLAIpExTqvOi2FU1r/wqxXdzj41WG2+0696GgbdsTcsL2T7TlcxO6F94D\r\nX57SKszjlPmeGb3X8WrM7KTMlNAxPVc5JH1qCHmqUCOR91u/4j8nk/vAPIqZ\r\ni+2aTjFW9LhehGFnvxOy2SItQFEBHnRHdJd67M9LRr88MbbZm/6BRCGFKDLs\r\nD0vytC/RVf5yw0zjPjGsXFw/IktGFCmFLwg2Qq/ch4qLhmWio5wyQWl+swlX\r\n8CmPsAePZsfLIleuURpFfosoOVTm45jkqnjdd4xLCqjE8fHANEaIhisADvB1\r\nEq4ty/Ir2MrPG4tfzf03eomP6YQutAXDgI275gSzRSnr97EzEH6j+NcWEk+L\r\n7Aw2Dby5muoeCghLH+vJWRRTAZA8rfJhJlq+FPSDS0+yAImdoXK0j4K82SDB\r\n19aB0ls6PlPYUeba3LDiG4GA4KdZaSiV5z4=\r\n=+nQk\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.30.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.18",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.3",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.62",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.10.0",
+				"@verdaccio/types": "11.0.0-6-next.21"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.30_1677154788666_0.4999088746412794",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.31": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.31",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.31",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "9da2e9c09ddb46d6e43b508705084071bcb5dc69",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.31.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-Na5WIXh4n52+2JW/S3aPKf9mdbWCfDKSweCDAH/bP5xoOZWa22P/L1yYP6sIaUjWoAb4xEgf09KL9/gOB2hfBw==",
+				"signatures": [
+					{
+						"sig": "MEUCIF9vPyppgcOeMhvVtIRjQHFnyTB5ICXaAfTElKeISONHAiEAi5sW9OLF7DJ64DMgJN9+1qA/NbOCqeLAiOtKghVYSiQ=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37743,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJj/Q4hACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpGcxAAkYrOv1tV2KKnrvXldQ83CLh2RPNS07Vw1hzVD0KRsTDMTgso\r\ne0FgTQFVKw5MHzZNtSFSyx6M+P6PtiDMB0c+WUPoupsBh3bh7BXI54YhJ36L\r\n2f0HH7RJ1gFsR87sH0y+fiH9DWNsF3yaf1G0HUNniRAggezY1WhyFt+H0PnH\r\nAEg9TTS4d2QTnsFvFiO1MYLMSb8t8lCdOzXTW87QKUOELdWZ9asJ9JPA04v0\r\nNfCk6monIcTLdVQV8jVheBfaUt18eACfbyANZPIu8WXIe8I88YZ+M18vTPUu\r\n9dCgiF2Kwl/MqcMyE8HHpuAbY8zV1jbfwbF4lGuESUH67+CcjHvbr7sItH8W\r\nQg8315waBr623Rwmx1Nmg0v0HBK21WQoUTP97sv/5zQD6C73/5z4mFSRga3E\r\nTu0hSfE0t97HV8yXqInKWXw1bNvVQSqPhLDQBpkXAaoZqrcL2f+7G0RqpBea\r\nxRovY+OMPqlTytSykrEoTpXdlHn4Sqto3Nm5IZDnUYZDUjHWX5qPnpBttZV1\r\n3P7Q+lIaS8vMh1HHb4laBqZUoottmmZG4QRTLCIb5y9h3x96JQvc9AQn4oKs\r\nU4qbtu/VUEG5vWN/flatM48DXOziXQCN3ymlBa4ThhNDz3/SdySr3KBAtm4t\r\n1hi6UV3az/t/uX1xooOgcaUD8Z4uuIuoafA=\r\n=7B17\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.31.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.18",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.3",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.63",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.10.0",
+				"@verdaccio/types": "11.0.0-6-next.22"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.31_1677528609342_0.4517860492368355",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.32": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.32",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.32",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "d74a6bb45e3e2d2c1c68c65a856a92c1d3a515b1",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.32.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-3VvPoIY82TVaqvH+ynbYZrWPENoA6Drk0rkVYSahEXQm5sZn2btCx1TmauttDsJTszTrFv+6KlOcGiw187/Z6A==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDHJW8W6CCFbVmBI75g6dAnRsJpCHL/4iAPLvP0WADd9gIhAJ4cu44Tg3ew1Wj4dlmz6yMpogod9MskBWCWdsze3rXj",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37853,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkB6bGACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmp1GA//TwEv6bNHs95PNxgm3ze0GpXvQ8xZEDLCHvNafB2bem6o8kAS\r\n/5h23vKqqSF98RtQStopwZ+uoL8NLSo+l+ne7V9X+9a1ylsIcgCAHmPNKBPz\r\npmCnh3PuQEz6Yjg/oUr+2orlbSBQKjEKgsLf8TefNV7AXjvAD9wRMx5oxTxS\r\nGtRL55DgYuTPr5VCxCIvL10ZN7NwylHkQrDgO5hGG2TxuRYbeYHHik1C4E6x\r\n5X8fwY3Gp5pmjHvxdG/KgNhfCWGajUq8EbQFrNeHF8pe1EMIfky8frLIUK7Q\r\nRzOFRTVgND7/4p0+T82En/gvjOyzfUV85tIAD8GmkkOrPsV5Aws55sOswSK4\r\n7/xEYMNfqvsOcbk5eSbTUCkrWAJ/QGZD297EfjSnMmgwO6nRUDn048Zef5CZ\r\nyGSf0UP8O7BW4STtqxUTP6NxsEuZY4A6pkB0RDvHM0SsQ8pU/kDDK1M3wSN8\r\n5MHbjW/v33SGm3MI8uLdlpoxqLhEVOLIicTO3yAJNwYTymeksTt93CxJb6xv\r\nlVVYjzPQokQaW/yqWQ5ciIHXcajlEVkY5y3YYOeoDRg4jzCBRcoaq8ch5xNI\r\n1LD9GptFMVjpsPYfdfZMWUUSJUbPlT72UlNiN8RW687AGqVg+gjSp1MXp+9Y\r\nSVBSuLj7sJ+3aYmT5moJApq7FV/Cr/HHXJU=\r\n=7/kV\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.32.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.18",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.3",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.64",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.10.0",
+				"@verdaccio/types": "11.0.0-6-next.23"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.32_1678223045845_0.8602408022605499",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.33": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.33",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.33",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "2ec56b3eeeb621b39fa17111562b43a388716af4",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.33.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-HB3ABs9csHbjCfOs7hRVyo01IP2oaFd9Duta887q/L6jOfP7hvKyxFEz0qohppxO741hCFKWMQ9JxZBZnGftzw==",
+				"signatures": [
+					{
+						"sig": "MEUCIGmX1zutC8fNhnTTqsPZKdqjfeLj16zleihfbvqhkbnyAiEAwJvMs+Nn+6y91KL+2vs1WbpuA+TEet7ORLLYNaQRf/Y=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37963,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkB65AACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpJhQ/+Kj5cJuLiwo6iu8vv1Rgibl3bkNZwpjwzE8Qc7Lq7XtP3pqTv\r\ntdt9hDSHEbi6/D9M+poH0e/jojcjJW8YXb48m2GeQr5T440jkYQfY+5UheVO\r\nMKqFpBZa2HGgD+cIcmVmY11g0KmFl0zZhZH829ptyfQRO3xujs17vysiB8cm\r\nSHBhOnPHLGZNYAZ7fYdPQeYgBhN2PCkQ63x8QDSaP9KEjgB/vxinnovYdDDr\r\nfXKQrr5hXowraOLAqnA9bN4yd3ABsCZypisWkQ+L+WCawTsZS3uuYg+zAqKt\r\nKdaJ5fpHNe1szkHMGtufXL8sXrLFM0nVCxTBiFB0UFSRljoL/exbyuXoncGk\r\nvtGLRN0rD8e7dy5hlsQrLEkBd0gYB2qhlmHjFIzgB8JRXqopMjrohvnlONaL\r\nEOZi7SIWWGoGoRXMkIOiQfWxBL9sf6UxneETyTBLHpff8Xtb2e90fLfifotl\r\njUVMGv3P+PUROxyKiTB6gTqHGE5p0elG20wtUvsLrq54XnMD5KckWpx8WC6f\r\nXtFzOiVJb/VWEBqgEsaMqAM8xZ93I6hYxCLqmX3q7c324pH+ybFH6ClLj1X7\r\nCN73AM6b4KBOuvZ+kO88vQqTwx1U1fysJ5GHvywBozYIYVonHuRfDZ9VkD6v\r\n4E3u9OUuSAfLQ4HIjt2MsN2aNZKU+EJMXZA=\r\n=rLlC\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.33.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.18",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.3",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.65",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.10.0",
+				"@verdaccio/types": "11.0.0-6-next.23"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.33_1678224959854_0.5552722744330338",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.34": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.34",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.34",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "19abd9a8749759b86b66f549aacfd671a0e7a2bf",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.34.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-IRKHcguMz2ssEFS6GMx/wo3DENv83lx4vHvJsa9NZeSvbs92RSy0Bnjx+G+vrvguEoQgU22sbzIUJ0kqHXw4Vg==",
+				"signatures": [
+					{
+						"sig": "MEQCIDIk90HSw1wBclC9Yf89/hU/NBYysOr6rk+HL+wL3WniAiBtfxIgKANT1ZY/u3VnSSEXndJAhP1uFOph3YtyCPY54g==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 38037,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkDc46ACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmpx1w/9Hj+3mm2my+PlXwmkM5Hk+J976dl9mM9wPYZflCeOeH894WoU\r\nP7V9H8ggjbm053c6aF4GwYPWutWQHnwng3B7FNyOo8pi+rKh6dhwWigzVU1p\r\nXyaQFUKqZ1beDnbbr29GZYOwdNx8CM0J89qulA9aDq9AGwqcmsPaFJgKiYd5\r\nJNvciYWNC7jo6Vrh4zKSsuBG4BEahiOGIyW+Rbjs0L+4J9CNvVRpwUyg1gWj\r\nXcA9X087Cpz2OaA0FnGRFw1EzRlvMTP3k77lWQaxQSV59xhTmzzJZzK1RKyg\r\nJ3hSEc8RuhMnpQSEfueBmFtoMVOHGJaxM1S4xdFn8tcRAF6TuivBBoGsDEZ6\r\ny2AnLMxtvJyabrO7Gzs6FeNDkik4jaPwJV5scPSGL+LIuFlcYdxAM4IkolV2\r\nzLGmCHlSox48I/4VfCm4GMxLq4GP1hdXKzF0PmgnCc3bbAz5sKmxGNgt8YvU\r\nXzgTiCz+B3Gjvd6fSVTYL9cmRIaj4AMSWQlvhj29evLwy/fWSaVKQSjFnbh3\r\nQdaCZNCN1weMwvee+QuvPpuOh8JVyc2RIFC38BeML/CyDoHpHQdmeIWvu8JF\r\n3KkChUlsX/3+AOeP2qzstnRB/hEMNFuVc5yq0t3IhONJMGvMJSsv163SQZZP\r\nR4Yhw1MPXtYeteXN3YP6UGg+FtDxAinymJ0=\r\n=KlBK\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.34.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.18",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.3",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.66",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.10.0",
+				"@verdaccio/types": "11.0.0-6-next.24"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.34_1678626362083_0.28670136082205677",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.35": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.35",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.35",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "0699f277a06ca1747b6080653d0984b1d1939987",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.35.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-CVsDy2SpJq9ryY4z5I0T1Xd0/EPPyNI78Uk6U67odjUN8cbyDTwCe/bbOPKOL6HBiiOtm39oSVeoztLFDobYmg==",
+				"signatures": [
+					{
+						"sig": "MEQCICLfrwkzMSl0j3Iho7Dzz8crZV4LUe5v0usgmr2xddkcAiASuZPfFT546heA3k521sFkDlJqnGavwSiynuVYoouC1A==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 38147,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkFit/ACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmo5RhAAn2GQ1A0G8FIeiqsRG+5jt2MsWKriPhT6ugUK70fUnj7weDeU\r\n+AtEnh1Y0rtl6MQ6n4YyNni2WJSEMuNxB6bH8T7pX8LihR6nYifryn/ybAQm\r\nrxsHbyAmdNsDyGZwrouIPphzaqYA0E95L7k1jlWUd8YLAL+PtgGgo3bWrM2v\r\n66sqvc1SbMeWKb9++nv+LeokrndnqOXL0HKspxPnZLgirKY2xftqp6NYyfpR\r\nhg4FTlZ1BKIz+owzmNO7fC9gB6s4Ebm0HU6GMsJYgxWtjSuYvZBJ1LhrfyKw\r\nlELGXeiWh8mLFzZwouspWUVYJt2jO41uqllbSh0j/Vghy8vyeu5wCAelPb7k\r\nSui3isz2Zjt1VO8EyfgXCl0q3439M5U2qcVaLWAmtiJIL/phmvhgPsKsweCw\r\nYHXV4kpC6m1YU3SHZx0ZJKhxByg3Mj7MC5in9CiwkHzZt61FrP7aNJosuP0P\r\n+GMaFNlZVX7Lu8KF8oljMNtZ4jihyMFCPjFRT9HL1QTrCY2FqN/rlMunsVt0\r\n2DgMjsSPPM7w3t29abVdir65l9AKuCyJrrbTlValp7SpOk2g/s7DigQ3tXnT\r\n+YyTnM9ydXSY4RBa3e0RYKNYBJZWsHKNZdsD6Quzebdd83Lr/uKeiU6qY+hE\r\ncGC9lkUR4wDWpIqe68P6WRi79WZuhAZSQfo=\r\n=e054\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.35.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "6.14.18",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "14.21.3",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.67",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.10.0",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.35_1679174527338_0.9060940956572188",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.36": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.36",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.36",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "cfff2ccca61d62bffeba9cca0ab16a228d1c9fa9",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.36.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-3ULwwd9RV72CK54Q1ugdWNDkVvuyrXgxotabX6MJ4NgF+FkFfFrDFGRnFwQmM7LhYDCCu5l6g+J7/5CohRWIIw==",
+				"signatures": [
+					{
+						"sig": "MEQCIAqikndN61TOIwoISzSpbkafW34JPTI1qChda8+89KujAiB81VFq4tNWAxt1jcU/JPQ7WhQyujHDXY+qIlBAPJWbzA==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 33596,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkQwTSACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrGlA//YD7wnWDE47Mt7HUEL3vk/ZFPM0QDjjnnn4KwbQTist2bx5fw\r\nVML+tgtU9VjqCu7hMkGBb5VSR7El3nopNcOTdMQbz6UMtpSYTe6DkLiE3hMw\r\nYZWV9/Ih9qD3mQ37gPmYx6oeOVtNGtNWCoJyLkrFRbtYC5nl9/ppVonPeFZS\r\nMXmd1gw2Q/lLcKkOlfdCU8RsEEn60Qov3OMVBayk5JztMwOZ0meIOsR8lfuD\r\nn8gaUuUwWoeKIFJ5LPaHeY1+PMtg1LG7oQSH5ICTfPNfo1AJ+ee+SxKideuH\r\njSPkVTRSSPWvu4WVkR2l8VB7cUfF2fuRYfKIte1Qo2ZEdce7mveexNqprUcc\r\nIYPaYewMEw0UGLqhbEIwt4iz5j2tmDkAkJj60S6wqUD1QQ7PwrSpi9E66ihu\r\n/OecRfCDqoutjjFPfJPc0Kf6Kxb0NpgkraDHqh9jTejY+gTPQ68ecvP3Is6k\r\nX4eCOEYP6QA+nfxAVsu47W7FYTXiCSWs9MRL49xh7vQ+JAen048JcT7pWroc\r\nkjUkxMbHrRTjAVNMUZgHbO4mhzTGOuC+A+Vixhtf/fOnZJULNsl8zBJyFHrF\r\nN/nZBZ/XZ8IFyEdN4V+MRqDmGHPKfADDWQ5M4RKwn5GTbGE7LlouhCS9xUJQ\r\nLyGMNCH/g9oPySyDzc+FkZfgJYGy+rbHN8A=\r\n=X5rD\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.36.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/5cede11e129afeb1383b5b1aefe76151/verdaccio-logger-commons-6.0.0-6-next.36.tgz",
+			"_integrity": "sha512-3ULwwd9RV72CK54Q1ugdWNDkVvuyrXgxotabX6MJ4NgF+FkFfFrDFGRnFwQmM7LhYDCCu5l6g+J7/5CohRWIIw==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.19",
+				"@verdaccio/core": "6.0.0-6-next.68",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.11.0",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.36_1682113746200_0.7021229272129113",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.37": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.37",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.37",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "cabe9cfc765e62226b3edb826794a12fe17d349f",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.37.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-vJLx0WlspKZ2mPnoOwUmVK45jXSJRrs/hYsCVZwYz0XafM5mxZL9xpAubxVEKnJ83StBcC6PGHl8T0fcpV7Dlg==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDWG6nWi3B+UO4M40RIlqxBDtBJ/RSgTRCIb0IpND3H1AIgcRDlWJ1NW4fSydixhHu5tHuW+vU/TsT5aJXVcC+qtjE=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 33706
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.37.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/367b5437f1c39427801db70ef61a584a/verdaccio-logger-commons-6.0.0-6-next.37.tgz",
+			"_integrity": "sha512-vJLx0WlspKZ2mPnoOwUmVK45jXSJRrs/hYsCVZwYz0XafM5mxZL9xpAubxVEKnJ83StBcC6PGHl8T0fcpV7Dlg==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "6.0.0-6-next.69",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.9"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.14.1",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.37_1684061080598_0.9806101845798691",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.38": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.38",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.38",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "a6b155d89af7df3792686995a6d0c7943a353a40",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.38.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-0QaOtLmfgb+g8ee3tjfzaQvZFVq1otQswFRuut+3q1Ns3wVka12Mq3jgiuGp5dVgevxhxutduJQWqa3M15FHzA==",
+				"signatures": [
+					{
+						"sig": "MEQCIHfpUeWA5uA1v+NZkag9OMnsN81sYXDbT2+a2cjz6KtEAiBaOPzk8sqbSYoiGN8dmEdsj6qUtVn08aWIOn25mO8K+A==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 33909
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.38.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/d3ee4fa89cd8bd3ef57720f59506f182/verdaccio-logger-commons-6.0.0-6-next.38.tgz",
+			"_integrity": "sha512-0QaOtLmfgb+g8ee3tjfzaQvZFVq1otQswFRuut+3q1Ns3wVka12Mq3jgiuGp5dVgevxhxutduJQWqa3M15FHzA==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "6.0.0-6-next.70",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.10"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "8.12.1",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.38_1684076989247_0.1880519101359588",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.39": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.39",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.39",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "8d51beae011e5ead1c28700eadea037114724e54",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.39.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-jdk8nDu2u3307XV2RtBo+FrC30xXGuSvZN7pQqFWCB9dJo21LpsMPTCgj9eBEwaAT+/ICTJURjO0VBkMlvcbGQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDLo+VeBnjxcprx1d/GI7QAw1NxiTgDB3PH3pGk0vsRIwIhAKlyYG42Cgyl17A40catVsx/ryQq+yt0qCn4nrB9v/cx",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 34056
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.39.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/94c711d903c851cae1b6eb80d0abfaba/verdaccio-logger-commons-6.0.0-6-next.39.tgz",
+			"_integrity": "sha512-jdk8nDu2u3307XV2RtBo+FrC30xXGuSvZN7pQqFWCB9dJo21LpsMPTCgj9eBEwaAT+/ICTJURjO0VBkMlvcbGQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "6.0.0-6-next.71",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.10"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.39_1685770182065_0.3752504174265787",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.40": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.40",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.40",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "1f8b286c915bc34aae10fd4a343b135a5ebd3ff6",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.40.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-jb6PjL5HhkaL+vtAQMgf0UNL9RlqOnyQ2qmKmcYJDxEQDH5JLpXOvUqWLSkrxCP1IGtHL6f/LB2EPElKTiwhQw==",
+				"signatures": [
+					{
+						"sig": "MEQCIE2Y8K9yUiNIgwYSfbgn8fVGYI6ThqgJwQTSXfMhVtNbAiAW7ikeVb/oP2pKR+fe3qjr89D7DWhtY7Mrksz8BX9VkA==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 34130
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.40.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/b5345d792cc443e40e53d34d4965eeb7/verdaccio-logger-commons-6.0.0-6-next.40.tgz",
+			"_integrity": "sha512-jb6PjL5HhkaL+vtAQMgf0UNL9RlqOnyQ2qmKmcYJDxEQDH5JLpXOvUqWLSkrxCP1IGtHL6f/LB2EPElKTiwhQw==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "6.0.0-6-next.72",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.10"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.40_1686614855345_0.23003820912495132",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.41": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.41",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.41",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "068bf104976f799da1e929b7762b703102697e95",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.41.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-jKQClpTb7YwC7piNULBkj9ldVb+b4Son2+DoRMaM5w3YGRZucrtSgH05uiNmDRV7CKzK4LI3z+IvcazFjVzLYw==",
+				"signatures": [
+					{
+						"sig": "MEQCIDC1i2QQftUPVDzNNcI9SXfMmfu2Enn9db56JGwkSMZlAiAsLiYSIGpScJU8SzqOm03zGCK0CMq/yAXUUUNilAaWKw==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 34241
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.41.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/1079617556dffed6c2204ed0cb01259c/verdaccio-logger-commons-6.0.0-6-next.41.tgz",
+			"_integrity": "sha512-jKQClpTb7YwC7piNULBkj9ldVb+b4Son2+DoRMaM5w3YGRZucrtSgH05uiNmDRV7CKzK4LI3z+IvcazFjVzLYw==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "6.0.0-6-next.73",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.10"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.41_1688892490984_0.9482207278364869",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.42": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.42",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.42",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "74c4f615b26ef44a9e179d8b2bdb043a9c827146",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.42.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-ydp12CVXdYhkXPxJevGW38Qf9HJdOF/KWcDmCWo7pi9atfiMkUWoOuEC1nr+7Dx+S5dA7kDfTqFLdadAuyO93A==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCkrqyfQ3a9Elc4Gx02TXqXrHf+oKXLeiEEzRGsJtI/ZAIhAKoT7QSXpjS3+psKMG7z9PewFybsY6kqtEtyeNwDKSyh",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 34315
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.42.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/9848f91a98e88e19adac008c2138829e/verdaccio-logger-commons-6.0.0-6-next.42.tgz",
+			"_integrity": "sha512-ydp12CVXdYhkXPxJevGW38Qf9HJdOF/KWcDmCWo7pi9atfiMkUWoOuEC1nr+7Dx+S5dA7kDfTqFLdadAuyO93A==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "6.0.0-6-next.74",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.10"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.42_1689447252339_0.6748260921165898",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.43": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.43",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.43",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "c0e74c80f0ac3286e154178812508c977c834942",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.43.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-zBgW9OATEcljdRp7AAIRWDs9/4lRjGyF1FRQowj/wMMB/Rk2Ov0wwsn7e1hb8hXtZXa01FgpGwHqT16RIbZ7wA==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDSgr6RloDl+cdQ70GIK00qixdGIG2AwUi+uKIUbd6z3wIhANtNRCw7hxAXnZIPJheLnpJFzw0xWrkXWbaQmCaol5Ki",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 34426
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.43.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/7c7d3a4ba2a465724711eeeb4dd1b10e/verdaccio-logger-commons-6.0.0-6-next.43.tgz",
+			"_integrity": "sha512-zBgW9OATEcljdRp7AAIRWDs9/4lRjGyF1FRQowj/wMMB/Rk2Ov0wwsn7e1hb8hXtZXa01FgpGwHqT16RIbZ7wA==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "6.0.0-6-next.75",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.10"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.43_1691475440613_0.2615303604939341",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"6.0.0-6-next.44": {
+			"name": "@verdaccio/logger-commons",
+			"version": "6.0.0-6-next.44",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@6.0.0-6-next.44",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "3a60ebd49a741efc31f11f6665b656ec476b2b66",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.44.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-we0Ad6ShuyXRxY2u/FaOGPF5nj9Uk41iqMYrtBmnPRHNeAf9Okl4jnPZ5kbzMpXL8rOeHYR/v/x4EXQ8qayueA==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCmTi9B9vu8MN/BpRdcGGwsXAvVOfCsB191Hebqf1Lt5gIhAI4hG341zHofdT61f6JzN2XmBL5ILy2JSpU/tcWIXrxP",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 34500
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-6.0.0-6-next.44.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/0ecaa6bc2a221c89ce796106712ff244/verdaccio-logger-commons-6.0.0-6-next.44.tgz",
+			"_integrity": "sha512-we0Ad6ShuyXRxY2u/FaOGPF5nj9Uk41iqMYrtBmnPRHNeAf9Okl4jnPZ5kbzMpXL8rOeHYR/v/x4EXQ8qayueA==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "6.0.0-6-next.76",
+				"@verdaccio/logger-prettify": "6.0.0-6-next.10"
+			},
+			"_hasShrinkwrap": false,
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "11.0.0-6-next.25"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_6.0.0-6-next.44_1692529156532_0.7493605581511427",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.0": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next.0",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next.0",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "a600cb998fcd4425c6fedb7a7713773c3f9c697d",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.0.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-dZ+LUBUIBF7o9JcQsHVvK4E2vv5Y7jeAZhetrDieztrDe3nNLEO/fFJstEOyXeKa2bWprB99e44mK0lvPa8anQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQD0FBdmdYVjEq6jRXs0JnvGoKgGLMH4jR5o2ankmcMRBAIhAKkCI+5vlFrOE/eFh+nnXqo14A9IeP1dDzZWbqdb89wV",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 36239
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next.0.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/45b8c989d0841734ac6879116b4d11e7/verdaccio-logger-commons-7.0.0-next.0.tgz",
+			"_integrity": "sha512-dZ+LUBUIBF7o9JcQsHVvK4E2vv5Y7jeAZhetrDieztrDe3nNLEO/fFJstEOyXeKa2bWprB99e44mK0lvPa8anQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next.0",
+				"@verdaccio/logger-prettify": "7.0.0-next.0"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.0"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next.0_1692632778403_0.7230978035805735",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.1": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next.1",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next.1",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "045620c61fa71998b943945bfbbc52ede9cda733",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.1.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-Prjl9A/1jWDM78H6MuW5ZLx2S+JfZY3Bn0G51qiUG0xZUQqgTvcDJni3m9myCVoGw+0dTS+NhkED/jyjodjKcw==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCdFNVLoKh5YeOjHgs2OaVCuRyHZG2CValJsHmNn6IJDQIgUkkjyhehklnDArecXEr/jqnHSGLY4LYQE5yh4LsO1TM=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 36307
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next.1.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/ecaa29cf3d7891d5a18beda2a7cd5c4a/verdaccio-logger-commons-7.0.0-next.1.tgz",
+			"_integrity": "sha512-Prjl9A/1jWDM78H6MuW5ZLx2S+JfZY3Bn0G51qiUG0xZUQqgTvcDJni3m9myCVoGw+0dTS+NhkED/jyjodjKcw==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next.1",
+				"@verdaccio/logger-prettify": "7.0.0-next.0"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.0"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next.1_1692910656496_0.5539084123620632",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.2": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next.2",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next.2",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "8c6ffc811885c4a474791facb274850edf94bc43",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.2.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-BqWnpWHPmUc0tqfzskOoOB0KIfFIRiBYNP+aJ3NeEEKE3DnVcwm3pe5cGvj43lJOxJZqQIOVxNHCoJhFh+TNrA==",
+				"signatures": [
+					{
+						"sig": "MEQCIE5y1im8C9gXkPNxiwzff62xeMZYPVQrVwy46u1WbvbWAiAoGVQrojuqcoyVb6gtm2c1P9sCDGuA3WnJ6FLEyqTXMg==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 36375
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next.2.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/136929c656c33022acda78f5d9711a56/verdaccio-logger-commons-7.0.0-next.2.tgz",
+			"_integrity": "sha512-BqWnpWHPmUc0tqfzskOoOB0KIfFIRiBYNP+aJ3NeEEKE3DnVcwm3pe5cGvj43lJOxJZqQIOVxNHCoJhFh+TNrA==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "8.19.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "16.20.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next.2",
+				"@verdaccio/logger-prettify": "7.0.0-next.0"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.0"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next.2_1695544888928_0.05817919967694385",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.3": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next.3",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next.3",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "62e72fc62b3aa117f84b2c4078869aa9b323dbcd",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.3.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-j1+9OeGN7WCuo+QZve8fbJEH9ju8rW18H0/xC+OEx6hzmNrmREgc60S5H6OEdSs8mn6wfD4LcMuV8ZDx/JaLMQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCrOnv+eZlYORRPQ4xadFLWPlKZqtPZRHwAL2i0jgACYQIhAPR9Du8vNIUZ2kMi1z3zQGxF85mRLOgZ6qVjf6nR6w5R",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 36701
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next.3.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/89f8f3e41dd8e3b03459dae4d82652bf/verdaccio-logger-commons-7.0.0-next.3.tgz",
+			"_integrity": "sha512-j1+9OeGN7WCuo+QZve8fbJEH9ju8rW18H0/xC+OEx6hzmNrmREgc60S5H6OEdSs8mn6wfD4LcMuV8ZDx/JaLMQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.1.0",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.8.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next.3",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.1"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next.3_1697317158126_0.7746091459749587",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.4": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next.4",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next.4",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "f200e7561c12284f1125fca67f7687c5a6c45f51",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.4.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-l7T3u8eW84UrQQHAOjqUw12t9q2IRleCnniQ9wV/KpBQNwuE3BPPy6t9/64QW9eXOzldJ8G3w7ttPCsK+cq8uw==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCLO5Kf5jio3xWDMrIH3K+VoGxV1Raj79+KdjRBEuCWTgIhAKYTz0fqnnF4CqvZ6J8UHNiQs1a1GARlHHSgiqdExBtC",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 36759
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next.4.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/e8ad83a0c5a1a9d6bb25c7620593358b/verdaccio-logger-commons-7.0.0-next.4.tgz",
+			"_integrity": "sha512-l7T3u8eW84UrQQHAOjqUw12t9q2IRleCnniQ9wV/KpBQNwuE3BPPy6t9/64QW9eXOzldJ8G3w7ttPCsK+cq8uw==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.1.0",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.9.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next.4",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.1"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next.4_1698506968034_0.12322846741864257",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.5": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next.5",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next.5",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "a13d1716bea45ebd74e92957946e9a48b2cf94e4",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.5.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-eDDXzAaege+Qf5QKzLxJegaPmOkHgHmSjJExZC2p02APsgm7uTdupJ3i5lIhrjUVors3evDwaS1QcK/CBB+hiQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQD6ZDAqvkROuNwn1mPw2ojvbnYMlPUNyNJH0p5j1UawngIhANgWgW5RiqBOGcR9SU31KLhqVV/PkSDsptGZBfOFigdu",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 36862
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next.5.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/c91a3dbdff2078d5dc437ae4de047d8e/verdaccio-logger-commons-7.0.0-next.5.tgz",
+			"_integrity": "sha512-eDDXzAaege+Qf5QKzLxJegaPmOkHgHmSjJExZC2p02APsgm7uTdupJ3i5lIhrjUVors3evDwaS1QcK/CBB+hiQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.3",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.10.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next.5",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next.5_1704031083297_0.35852753160009976",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next.6": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next.6",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next.6",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "f6267972f49e4ad3a1dc1e811f24671dab61da37",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.6.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-eNvKLI4Y5LA+Sx9nKIx1XO8jqExzR1kSLnN1LNghqLCRJuKk4GR7JWZwOdd+LVKLnDJKfhMVzUfDm3Q3sxUc+A==",
+				"signatures": [
+					{
+						"sig": "MEUCIQC4RgWJLdau5JR97JKa5S1eLySdJhBP9JHS5Zdqd/x3FgIgPdBayTdFELlytZ63zdjgsP1rPxx1s9CWJY297BGABKM=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 36930
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next.6.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/48e973104e020e76b7a6c396f9ec759e/verdaccio-logger-commons-7.0.0-next.6.tgz",
+			"_integrity": "sha512-eNvKLI4Y5LA+Sx9nKIx1XO8jqExzR1kSLnN1LNghqLCRJuKk4GR7JWZwOdd+LVKLnDJKfhMVzUfDm3Q3sxUc+A==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.3",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.10.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next.6",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next.6_1704618370033_0.25350886547735163",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.7": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.7",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.7",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "9d5453a49f1d6852fbed80ae94162f7554ecd88b",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.7.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-wLRHIHEe2vQj3H2IvxhqobGQcE26P0ie0nvAsMlA9lAk01IKfRHEsd3fGqN8AXX2/sZgl3VXnm4lVLBUxK0S7g==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCdF+U6GJVIJmapLRHUHwKbBkBltnKFRoDT+AG+7Sxy5AIhAM+eA9fkSpbVjlo08kha2JaAIocEQCqAJJEru8N02fI0",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37006
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.7.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/5ddf08642ae4125a2ffd649ae28898d4/verdaccio-logger-commons-7.0.0-next-7.7.tgz",
+			"_integrity": "sha512-wLRHIHEe2vQj3H2IvxhqobGQcE26P0ie0nvAsMlA9lAk01IKfRHEsd3fGqN8AXX2/sZgl3VXnm4lVLBUxK0S7g==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.3",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.10.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.7",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.7_1705226420436_0.962779423411535",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.8": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.8",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.8",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "833cb768577cd62bb895ef3c41ac8da03e98d863",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.8.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-nMNMmAnKfu7vesNMPKvUcrP4+KLostAYKEQbup5nZrOVLqr5FZySkfMt5Cur7e9n9giNuxH+Bs8o1nbSluomsg==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDjxglISrRtHSmjRiCE7YUUnpLLgpzPkChYuPacXuhzeQIgBGxkwY+Xb3U3l0Ma/AHxQnBrveIGifcYhmYA1lhcx10=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37078
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.8.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/17c7ed95dc8f3d2377d03ae6e9d742cc/verdaccio-logger-commons-7.0.0-next-7.8.tgz",
+			"_integrity": "sha512-nMNMmAnKfu7vesNMPKvUcrP4+KLostAYKEQbup5nZrOVLqr5FZySkfMt5Cur7e9n9giNuxH+Bs8o1nbSluomsg==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.11.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.8",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.8_1707690028773_0.7342397007334505",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.9": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.9",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.9",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "459e7a3d781e110c1d0ddf30016a7c556be7814c",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.9.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-67AZgb4OubX9ODtmOYhxPwdUh5t+YxoYLzC2hHhL6x4I1dT41g8jYGY1Ikyx+BLyfIYfln6PXUKrsG4e4pXNHg==",
+				"signatures": [
+					{
+						"sig": "MEUCIHEp86vDENcpDlwCAmm6THjs6hQSfE+Q6bY81iKBX8ctAiEA8AxM4Xjim1QHK2qmKPYUEPyxlcSnSG/PJcrpZkT84ZM=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37150
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.9.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/480b999604f2a1c4e9de1a6afa92d243/verdaccio-logger-commons-7.0.0-next-7.9.tgz",
+			"_integrity": "sha512-67AZgb4OubX9ODtmOYhxPwdUh5t+YxoYLzC2hHhL6x4I1dT41g8jYGY1Ikyx+BLyfIYfln6PXUKrsG4e4pXNHg==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.11.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.9",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.9_1707767276458_0.919601103089589",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.10": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.10",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.10",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "f5153c06a41f396a644996f9b9f87bf6362209ea",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.10.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-RTA4K6KvoCrgqA1aVP4n8IDZfUQtaza2FcPjEsBShLQg0rHFJi/5/yQg+J4MpOvYlKbrusOy9pwN86h9pCe+CA==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDJRSVNjCkeePH8fu6fEw8keLfe6Sef2IFvnCYe5PJy6wIgPHsqem4YYJKd1WtVUEhvLRJgozke1a8A/F9VE9PPALQ=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37226
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.10.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/f9c7db494f6cfc51f20fe891316e0b04/verdaccio-logger-commons-7.0.0-next-7.10.tgz",
+			"_integrity": "sha512-RTA4K6KvoCrgqA1aVP4n8IDZfUQtaza2FcPjEsBShLQg0rHFJi/5/yQg+J4MpOvYlKbrusOy9pwN86h9pCe+CA==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.11.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.10",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.10_1708463161314_0.687383538177073",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.11": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.11",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.11",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "bb94a78464d81bd350ba0ca87adf00720ef69469",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.11.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-KvTVqHtg+1vPAIqN6CzNVuOe5qPmekv41lpU5/Ygbzkue0bk5xaPbHCO9KaO+uJhfZ4btA1WZ1sWlUskwiZwGQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDEa9r+GKLrO1bBowwQUqyycIbdxtf527MCYA9yZ+uxaQIhAIT/0kf4uIjLrD1AlxgDxb3m3dcKKOUabTsIYBK5dDWh",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37300
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.11.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/9e0351a74d32f53a485dcef9729ca230/verdaccio-logger-commons-7.0.0-next-7.11.tgz",
+			"_integrity": "sha512-KvTVqHtg+1vPAIqN6CzNVuOe5qPmekv41lpU5/Ygbzkue0bk5xaPbHCO9KaO+uJhfZ4btA1WZ1sWlUskwiZwGQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.11.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.11",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.11_1709490661586_0.4511873794181569",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.12": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.12",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.12",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "deb309f5b7c5688464c51dd404d95c6126a4a38c",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.12.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-TUHnIADVoh05xdnI8HD+rPZDhEtz3OWfSOzTBtq5y8J0Z6PprD+hbY5jPl5r63xqWlYzde7mCsd9VaHvZs2PHA==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCbjGSZg/Y9r/8qUz0lluIqkPZZTUv0nDMo74deXQ2FIQIgbEOZl6IV2T7jmrLkaN1d2B/ldkrISGdkyGYmESJQKAc=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37374
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.12.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/8a4455e8976ff136ebeaa7860ad9a495/verdaccio-logger-commons-7.0.0-next-7.12.tgz",
+			"_integrity": "sha512-TUHnIADVoh05xdnI8HD+rPZDhEtz3OWfSOzTBtq5y8J0Z6PprD+hbY5jPl5r63xqWlYzde7mCsd9VaHvZs2PHA==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.11.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.12",
+				"@verdaccio/logger-prettify": "7.0.0-next.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.12_1710093281611_0.49616618680148505",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.13": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.13",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.13",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "9bdc86527e63c01f6232c59eaaaf2f6604db4fdf",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.13.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-C45E+e/yMc54hXzRkiUZjl/fXObfcAGE1EMXxZjIqjPUx4gnAWEuTpT1NVRxZbMU6HdpOOKrgijwYkBpo5pgCg==",
+				"signatures": [
+					{
+						"sig": "MEUCIH9IteM6rX5+MNiDZ9AkF3W6DFI13nEMiVRIP5Nem+dMAiEAqlIy3JsAc5WUlDWTItjb07CPipoLu88QrNIDTaQOe9A=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37531
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.13.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/ae0ed9861eb0a69cb0ed1c8a3dd2d6c4/verdaccio-logger-commons-7.0.0-next-7.13.tgz",
+			"_integrity": "sha512-C45E+e/yMc54hXzRkiUZjl/fXObfcAGE1EMXxZjIqjPUx4gnAWEuTpT1NVRxZbMU6HdpOOKrgijwYkBpo5pgCg==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.2.4",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.11.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.13",
+				"@verdaccio/logger-prettify": "7.0.0-next-7.2"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.13_1711223846786_0.14148821194259598",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.14": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.14",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.14",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "099c50dec5cd22fd2afe8ffaed1b4ec532a73c73",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.14.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-cHQgQpwEJamhbZCWP2ri7DcMXfJo9XnkD/qvi3ExetFBcztlPIJLCtZHPH0LZhv35zDkbMRHMwCflpagUNoHzg==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCzhLdCJbeZjRb2mSJHd/zRe5VnOEAVSAGoMifVwlviHAIgB7MaEORoCzZrAHsBudplMy0bNjy4AEp9QhdiGZtppxM=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37605
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.14.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/11f0265db96bb3d4b2aad074fac7e47f/verdaccio-logger-commons-7.0.0-next-7.14.tgz",
+			"_integrity": "sha512-cHQgQpwEJamhbZCWP2ri7DcMXfJo9XnkD/qvi3ExetFBcztlPIJLCtZHPH0LZhv35zDkbMRHMwCflpagUNoHzg==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.5.0",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.12.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.14",
+				"@verdaccio/logger-prettify": "7.0.0-next-7.2"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.14_1714720581913_0.6210346715877857",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.15": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.15",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.15",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "98c85a234b89f42d08934e9e0352b467b90a3a91",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.15.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-MeAaU2IMdZSwdO/hrh7aTg1ax3iKlPf6eLVf0JpNYKDxN8OCsi2o5+Q014rGyEG8++Pri3D4DIxMJA7TA+t15g==",
+				"signatures": [
+					{
+						"sig": "MEQCIGbYIfzWjp8ooHcQmWEG2pwyACOMahpfeHnwX6nInN2mAiB+w9XlHxGj0ypTi82fCj+uU6y3D4Wx3iV1b2goJIyZKA==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37716
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.15.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/b4054fdebff26e08aa6c4aee33097232/verdaccio-logger-commons-7.0.0-next-7.15.tgz",
+			"_integrity": "sha512-MeAaU2IMdZSwdO/hrh7aTg1ax3iKlPf6eLVf0JpNYKDxN8OCsi2o5+Q014rGyEG8++Pri3D4DIxMJA7TA+t15g==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.5.0",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.12.2",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.15",
+				"@verdaccio/logger-prettify": "7.0.0-next-7.2"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next-7.3"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.15_1714922016039_0.6771141837171673",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.16": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.16",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.16",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "a88f4a6794f8e4237bfd09ceb9fe6b3d86cdefce",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.16.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-uGchjJUFEtksGLQ57EIjbMU5yq/6yf9Dfuz9ZTNE99meyDJndUAcCrvGvL3DoItDqFYt36HHqe/nzhC9XFwDfQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDdU6qkVz6CtjKMPYiWQq9zmEyjB5g9Mxgfbd99tZt7HAIgX1qpUVojYb7E/98AgQAfu8kotnwBAIqwo9SSfU3rLPw=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 37934
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.16.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/a79dc2f37c303173833f26cc371a865f/verdaccio-logger-commons-7.0.0-next-7.16.tgz",
+			"_integrity": "sha512-uGchjJUFEtksGLQ57EIjbMU5yq/6yf9Dfuz9ZTNE99meyDJndUAcCrvGvL3DoItDqFYt36HHqe/nzhC9XFwDfQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.5.2",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.13.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.16",
+				"@verdaccio/logger-prettify": "7.0.0-next-7.3"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next-7.3"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.16_1717358199808_0.871992414742343",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.17": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.17",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.17",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "fc7a584b8d64ea2295bc2b08d6e2ce8735a828a5",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.17.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-++gMfiXiTb5L0fb+BCfj9VimY2ztwOKzCvygB/5sJnHDA9cQu6W20qkPK/g4B7mb9i5ZEnwv5mMs19eKkvQF8w==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCHmu+CgPxwww+qJGL+oPgIhmj7Ld+KURbs3mCNZUpxTQIhAJvoXoYuy3oV+COP5ChFQs0734HGzHYdv8hd9k9Qy8HD",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 38043
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.17.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/00fcddfc53b1d3b7f56bbcb6d2e94e8a/verdaccio-logger-commons-7.0.0-next-7.17.tgz",
+			"_integrity": "sha512-++gMfiXiTb5L0fb+BCfj9VimY2ztwOKzCvygB/5sJnHDA9cQu6W20qkPK/g4B7mb9i5ZEnwv5mMs19eKkvQF8w==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.7.0",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.14.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.17",
+				"@verdaccio/logger-prettify": "7.0.0-next-7.3"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next-7.4"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.17_1718523260015_0.5108281022481462",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.18": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.18",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.18",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "14155c3eed4ab2614a76beccad25e3f3510ebf0c",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.18.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-qIjS8TGlPwxBd8fITjiFAeeOX9cCtTfagWewBKfm45tSEEvONInR+UbIZneKFsV+lT6DD4gGuS424RlE3zXFzQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIBgAA0JZM5qRrxWSASDsMq+Ts5h8UL1CgvLqCFdW76kTAiEA+3PLVh7rm4OneLwTwDB7s024wn5ouhYWDB/GikoTty0=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 38117
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.18.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/7b9dabbc0a5bce64991f9f5db5a1de1b/verdaccio-logger-commons-7.0.0-next-7.18.tgz",
+			"_integrity": "sha512-qIjS8TGlPwxBd8fITjiFAeeOX9cCtTfagWewBKfm45tSEEvONInR+UbIZneKFsV+lT6DD4gGuS424RlE3zXFzQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.7.0",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.15.0",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.18",
+				"@verdaccio/logger-prettify": "7.0.0-next-7.3"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next-7.5"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.18_1720370955438_0.6558702834523886",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.19": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.19",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.19",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "469d08165a0fa18482f46825b19f53d5593d879a",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.19.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-ykqCvtmwl4QyiurAtMiAl2lufBuvNO3ENcsLdqYZIOO6LL8ie3agdwcJB6cpA8fiEWO1UsX0J3q3U1Drku4rTg==",
+				"signatures": [
+					{
+						"sig": "MEUCIGeWFlece9fEtnwJcRlnroUS7Q054uLVXqh4qM1N7xlBAiEAk+bByE4i9Av2hzZAmNCVx69Ml61C17m3kb7g6NT9Y2Q=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 38211
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.19.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/66e9f2598c2794bd06a89214196cead7/verdaccio-logger-commons-7.0.0-next-7.19.tgz",
+			"_integrity": "sha512-ykqCvtmwl4QyiurAtMiAl2lufBuvNO3ENcsLdqYZIOO6LL8ie3agdwcJB6cpA8fiEWO1UsX0J3q3U1Drku4rTg==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.7.0",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.15.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.19",
+				"@verdaccio/logger-prettify": "7.0.0-next-7.3"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next-7.5"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.19_1721578215799_0.9366609888417639",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-7.20": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-7.20",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-7.20",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "0394324b170e6082d6d6e0e4308fff96da9e7038",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.20.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-WNRkgWlk+WDT49ydKQMMFshI/31cWOP5z1ut89b3toCifBtgwQKc6rjy75fwrsLNM8PSP3Gi7oX+2QdRtbR0mQ==",
+				"signatures": [
+					{
+						"sig": "MEUCICMtI+Wpuj8m2A+OTQVFUsfjELSH1tirxhasg/eoGZwJAiEA0k/8mfI3xEgDYxJ33kei49VmSoUnvfYirNTWCdDTc6c=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 38285
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-7.20.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/243e90e8323eb0d76adc1bc32f7cdb6a/verdaccio-logger-commons-7.0.0-next-7.20.tgz",
+			"_integrity": "sha512-WNRkgWlk+WDT49ydKQMMFshI/31cWOP5z1ut89b3toCifBtgwQKc6rjy75fwrsLNM8PSP3Gi7oX+2QdRtbR0mQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.7.0",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.15.1",
+			"dependencies": {
+				"debug": "4.3.4",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-7.20",
+				"@verdaccio/logger-prettify": "7.0.0-next-7.3"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next-7.5"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-7.20_1722530392577_0.48966572118829976",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"7.0.0-next-8.21": {
+			"name": "@verdaccio/logger-commons",
+			"version": "7.0.0-next-8.21",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@7.0.0-next-8.21",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "13a8ffe62a5f13e9034f9ce172f57a23e96ba452",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-8.21.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-ZUhGa9CUFKZuFGRPA0hmfWr200oYIparRzilYsAuZGbhAc//DR6dvNBr/R/691MuIv49MoCxX8wXoROmaqmwOg==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCuiDnUBDfONi9c4hXw1wl36cxKjihaDeEPP7sGLicGrQIhAM7U9vDze2oMT5OADfM/94JgWsQYKaqCkKXh0VdEJqdB",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 38394
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-7.0.0-next-8.21.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/4bd68bda2b2296942228872def415469/verdaccio-logger-commons-7.0.0-next-8.21.tgz",
+			"_integrity": "sha512-ZUhGa9CUFKZuFGRPA0hmfWr200oYIparRzilYsAuZGbhAc//DR6dvNBr/R/691MuIv49MoCxX8wXoROmaqmwOg==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.8.2",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.17.0",
+			"dependencies": {
+				"debug": "4.3.6",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "7.0.0-next-8.21",
+				"@verdaccio/logger-prettify": "7.0.0-next-7.3"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "12.0.0-next-7.5"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_7.0.0-next-8.21_1726084857057_0.29957572583356407",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"8.0.0-next-8.0": {
+			"name": "@verdaccio/logger-commons",
+			"version": "8.0.0-next-8.0",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@8.0.0-next-8.0",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "6bb918f93828f2c0831b80cea3eb58506c23a852",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.0.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-kSST5wctVq9sCJc6/6pYHWWNV789ml1iSIROsy+AXsJCyhbJK2mnRKgSz3vsnQiGdXqyd72nyitGdZCC7nn0lQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCG/Xaf0O4y5mUlrkxHJUabItxjbskfvl2Tw2vkVLLXtAIhAPan1etXP5gH3IbO+HPjOrftDU9Xa8q46A1NiQY9wvXC",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 39216
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-8.0.0-next-8.0.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/404df2ac83235b7bfc16f6d56c90902d/verdaccio-logger-commons-8.0.0-next-8.0.tgz",
+			"_integrity": "sha512-kSST5wctVq9sCJc6/6pYHWWNV789ml1iSIROsy+AXsJCyhbJK2mnRKgSz3vsnQiGdXqyd72nyitGdZCC7nn0lQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.8.2",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.17.0",
+			"dependencies": {
+				"debug": "4.3.7",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "8.0.0-next-8.0",
+				"@verdaccio/logger-prettify": "8.0.0-next-8.0"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "13.0.0-next-8.0"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_8.0.0-next-8.0_1726165342219_0.15471674651591338",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"8.0.0-next-8.1": {
+			"name": "@verdaccio/logger-commons",
+			"version": "8.0.0-next-8.1",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@8.0.0-next-8.1",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "d134170e5951e6b26a742dc546c81db449dc6117",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.1.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-jCge//RT4uaK7MarhpzcJeJ5Uvtu/DbJ1wvJQyGiFe+9AvxDGm3EUFXvawLFZ0lzYhmLt1nvm7kevcc3vOm2ZQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIQC1tkJaKn/fs7m938XtN2WhBW2vg2N1c+tWmBS3X8vSIgIgI7ZWuLPU9GwMHR2ZCTtgFxi0XM2kAqII1ivCKm6F0Qk=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 39288
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-8.0.0-next-8.1.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=12"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/b9be1c1a53a83798f0330aad8c28005b/verdaccio-logger-commons-8.0.0-next-8.1.tgz",
+			"_integrity": "sha512-jCge//RT4uaK7MarhpzcJeJ5Uvtu/DbJ1wvJQyGiFe+9AvxDGm3EUFXvawLFZ0lzYhmLt1nvm7kevcc3vOm2ZQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.8.2",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.17.0",
+			"dependencies": {
+				"debug": "4.3.7",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "8.0.0-next-8.1",
+				"@verdaccio/logger-prettify": "8.0.0-next-8.0"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "7.11.0",
+				"@verdaccio/types": "13.0.0-next-8.0"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_8.0.0-next-8.1_1726169270566_0.3926853523093641",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"8.0.0-next-8.2": {
+			"name": "@verdaccio/logger-commons",
+			"version": "8.0.0-next-8.2",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@8.0.0-next-8.2",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "8b3aa0ffd42f6eaca687b9c75ebca915aba52b94",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.2.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-0/OwoFeaEwtnrdous4rqbXRRmlsp1A+z6QKKFjmBLOWsK0tuo00v61DBP6614nI1gFCGqQLZFl/JTpYRGVgHMA==",
+				"signatures": [
+					{
+						"sig": "MEQCIDTWl2wFwtDT8TGb7NvrzwZe3xOecoorcMkOBn8K0/9RAiBYY5tCKRbqXah9vNohNN4JUU2I8hmrl2HutTHPgER6xw==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 39347
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-8.0.0-next-8.2.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=18"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/f13242aaefa3055e4d8da6703e9c4413/verdaccio-logger-commons-8.0.0-next-8.2.tgz",
+			"_integrity": "sha512-0/OwoFeaEwtnrdous4rqbXRRmlsp1A+z6QKKFjmBLOWsK0tuo00v61DBP6614nI1gFCGqQLZFl/JTpYRGVgHMA==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.8.2",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.17.0",
+			"dependencies": {
+				"debug": "4.3.7",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "8.0.0-next-8.2",
+				"@verdaccio/logger-prettify": "8.0.0-next-8.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "9.4.0",
+				"@verdaccio/types": "13.0.0-next-8.1"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_8.0.0-next-8.2_1727299449375_0.39407754558062913",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"8.0.0-next-8.3": {
+			"name": "@verdaccio/logger-commons",
+			"version": "8.0.0-next-8.3",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@8.0.0-next-8.3",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "4ba99b361e1638985c9a952f721e374bc941c7fd",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.3.tgz",
+				"fileCount": 18,
+				"integrity": "sha512-eMG0UDh66JcPX8ez57HCpsZ0FE9G0pCZ51Xei1MeCFVgNLkzrEcnwOcEGZhd3Tew79A4wGgjFFFywkrRIIomwg==",
+				"signatures": [
+					{
+						"sig": "MEUCIFN1jiiuG9/YPKSdfU1YwDYMb2vCFYTkLLXRg7tyPPKIAiEAk9ELTPxgJvqI/mhYG5EvKARUumvf/8SF6Ey8JH+jN/E=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 39419
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-8.0.0-next-8.3.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=18"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/bada2e671f3d8a6010064d032c42ccf9/verdaccio-logger-commons-8.0.0-next-8.3.tgz",
+			"_integrity": "sha512-eMG0UDh66JcPX8ez57HCpsZ0FE9G0pCZ51Xei1MeCFVgNLkzrEcnwOcEGZhd3Tew79A4wGgjFFFywkrRIIomwg==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.8.2",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.17.0",
+			"dependencies": {
+				"debug": "4.3.7",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "8.0.0-next-8.3",
+				"@verdaccio/logger-prettify": "8.0.0-next-8.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "9.4.0",
+				"@verdaccio/types": "13.0.0-next-8.1"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_8.0.0-next-8.3_1728369262761_0.38333627960835237",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"8.0.0-next-8.4": {
+			"name": "@verdaccio/logger-commons",
+			"version": "8.0.0-next-8.4",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@8.0.0-next-8.4",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "1024df719409d0063acd3ad4488be8c9b210b894",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.4.tgz",
+				"fileCount": 17,
+				"integrity": "sha512-neDbq5IIRoidFT4Rv3zH9YydICDCJEybb06BzCGVOzlhZ7F+fBzJH1qlBhAEISfbONugDgfuUQ2jbRCKEkHezQ==",
+				"signatures": [
+					{
+						"sig": "MEQCIAEAeLTyhGUDCRfDOzufu0Dqxc4En/PNj0olEmvZOvTfAiA7cm8NvyOwHuVsuYvZoEO5DyJYggT/2yG6DL7j1fVEWw==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 39424
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-8.0.0-next-8.4.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=18"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc jest",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/c194e29d2d1f0ff9b38b41d2ce32fa81/verdaccio-logger-commons-8.0.0-next-8.4.tgz",
+			"_integrity": "sha512-neDbq5IIRoidFT4Rv3zH9YydICDCJEybb06BzCGVOzlhZ7F+fBzJH1qlBhAEISfbONugDgfuUQ2jbRCKEkHezQ==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.8.2",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.18.0",
+			"dependencies": {
+				"debug": "4.3.7",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "8.0.0-next-8.4",
+				"@verdaccio/logger-prettify": "8.0.0-next-8.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "9.4.0",
+				"@verdaccio/types": "13.0.0-next-8.1"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_8.0.0-next-8.4_1731610773447_0.6045792721814223",
+				"host": "s3://npm-registry-packages"
+			},
+			"contributors": []
+		},
+		"8.0.0-next-8.5": {
+			"name": "@verdaccio/logger-commons",
+			"version": "8.0.0-next-8.5",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"license": "MIT",
+			"_id": "@verdaccio/logger-commons@8.0.0-next-8.5",
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"homepage": "https://verdaccio.org",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"dist": {
+				"shasum": "aaa477e1cddc283222928b2170184fba27eb5c64",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.5.tgz",
+				"fileCount": 17,
+				"integrity": "sha512-wz1Uozl2Nj7kLbM7HLCVb1oTWEy2OcT33DQ5bKv1Lw6zuFbIOFNfa4CJZi/sDKQsZGWrS1wULvV+vxbX4C12uw==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDxUzNqVq43wDXF6go4r1z9oh8vpppcNeoWXTv9W1nQkgIhANcaTkdHeL1GBw0EO6jymFsW4aZB+BppOzwhkO/J35P+",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 40078
+			},
+			"main": "./build/index.js",
+			"_from": "file:verdaccio-logger-commons-8.0.0-next-8.5.tgz",
+			"types": "./build/index.d.ts",
+			"engines": {
+				"node": ">=18"
+			},
+			"funding": {
+				"url": "https://opencollective.com/verdaccio",
+				"type": "opencollective"
+			},
+			"scripts": {
+				"test": "cross-env TZ=utc vitest run",
+				"build": "pnpm run build:js && pnpm run build:types",
+				"clean": "rimraf ./build",
+				"watch": "pnpm build:js -- --watch",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"_resolved": "/tmp/087edcbee2ecaf33108fcfbb09280c34/verdaccio-logger-commons-8.0.0-next-8.5.tgz",
+			"_integrity": "sha512-wz1Uozl2Nj7kLbM7HLCVb1oTWEy2OcT33DQ5bKv1Lw6zuFbIOFNfa4CJZi/sDKQsZGWrS1wULvV+vxbX4C12uw==",
+			"repository": {
+				"url": "git+https://github.com/verdaccio/verdaccio.git",
+				"type": "https"
+			},
+			"_npmVersion": "10.8.2",
+			"description": "logger",
+			"directories": {},
+			"_nodeVersion": "20.18.1",
+			"dependencies": {
+				"debug": "4.3.7",
+				"colorette": "2.0.20",
+				"@verdaccio/core": "8.0.0-next-8.5",
+				"@verdaccio/logger-prettify": "8.0.0-next-8.1"
+			},
+			"_hasShrinkwrap": false,
+			"readmeFilename": "README.md",
+			"devDependencies": {
+				"pino": "9.4.0",
+				"@verdaccio/types": "13.0.0-next-8.2"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/logger-commons_8.0.0-next-8.5_1733951853671_0.30676467592209744",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"contributors": []
+		},
+		"8.0.0-next-8.6": {
+			"name": "@verdaccio/logger-commons",
+			"version": "8.0.0-next-8.6",
+			"description": "logger",
+			"main": "./build/index.js",
+			"types": "./build/index.d.ts",
+			"author": {
+				"name": "Juan Picado",
+				"email": "juanpicado19@gmail.com"
+			},
+			"repository": {
+				"type": "https",
+				"url": "git+https://github.com/verdaccio/verdaccio.git"
+			},
+			"license": "MIT",
+			"homepage": "https://verdaccio.org",
+			"keywords": [
+				"private",
+				"package",
+				"repository",
+				"registry",
+				"enterprise",
+				"modules",
+				"proxy",
+				"server",
+				"verdaccio"
+			],
+			"engines": {
+				"node": ">=18"
+			},
+			"dependencies": {
+				"@verdaccio/core": "8.0.0-next-8.6",
+				"@verdaccio/logger-prettify": "8.0.0-next-8.1",
+				"debug": "4.3.7",
+				"colorette": "2.0.20"
+			},
+			"devDependencies": {
+				"pino": "9.4.0",
+				"@verdaccio/types": "13.0.0-next-8.2"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/verdaccio"
+			},
+			"scripts": {
+				"clean": "rimraf ./build",
+				"test": "cross-env TZ=utc vitest run",
+				"type-check": "tsc --noEmit -p tsconfig.build.json",
+				"build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json",
+				"build:js": "babel src/ --out-dir build/ --copy-files --extensions \".ts,.tsx\" --source-maps",
+				"watch": "pnpm build:js -- --watch",
+				"build": "pnpm run build:js && pnpm run build:types"
+			},
+			"_id": "@verdaccio/logger-commons@8.0.0-next-8.6",
+			"readmeFilename": "README.md",
+			"bugs": {
+				"url": "https://github.com/verdaccio/verdaccio/issues"
+			},
+			"_integrity": "sha512-AyixYmAw0GeH0/pc68gz2G8IsC9c3vQLRYDm4WBzhO2Pto75n9oZ69YoKAOt8Ba/Xf4MoDt1LbAuOPAEJ4p2ag==",
+			"_resolved": "/tmp/01bc885c07c670296de8c477982bb33a/verdaccio-logger-commons-8.0.0-next-8.6.tgz",
+			"_from": "file:verdaccio-logger-commons-8.0.0-next-8.6.tgz",
+			"_nodeVersion": "20.18.1",
+			"_npmVersion": "10.8.2",
+			"dist": {
+				"integrity": "sha512-AyixYmAw0GeH0/pc68gz2G8IsC9c3vQLRYDm4WBzhO2Pto75n9oZ69YoKAOt8Ba/Xf4MoDt1LbAuOPAEJ4p2ag==",
+				"shasum": "775ff3a4439798ecae0846456bc20ffb9f748bd0",
+				"tarball": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.6.tgz",
+				"fileCount": 17,
+				"unpackedSize": 40150,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCOEY9+xmoxUQxdEwtcO+TQ/EQN7aKJqFyDxoA9C46FLQIgRMPMJ5jlbNySyfRm8FaR0l7TFXhD8UgO7AiH91srmv8="
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "verdaccio.npm",
+				"email": "verdaccio.npm@gmail.com"
+			},
+			"directories": {},
+			"maintainers": [
+				{
+					"name": "sergiohgz",
+					"email": "sergio@sergiohgz.eu"
+				},
+				{
+					"name": "verdaccio.npm",
+					"email": "verdaccio.npm@gmail.com"
+				},
+				{
+					"name": "jotadeveloper",
+					"email": "juanpicado19@gmail.com"
+				},
+				{
+					"name": "ayusharma",
+					"email": "ayush.aceit@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/logger-commons_8.0.0-next-8.6_1734252416466_0.6322913209871879"
+			},
+			"_hasShrinkwrap": false,
+			"contributors": []
+		}
+	},
+	"time": {
+		"created": "2023-02-05T20:33:40.112Z",
+		"modified": "2024-12-15T08:46:56.899Z",
+		"6.0.0-6-next.25": "2023-02-05T20:33:40.416Z",
+		"6.0.0-6-next.26": "2023-02-05T21:05:17.821Z",
+		"6.0.0-6-next.27": "2023-02-06T05:25:05.928Z",
+		"6.0.0-6-next.28": "2023-02-14T16:43:45.455Z",
+		"6.0.0-6-next.29": "2023-02-14T21:04:01.648Z",
+		"6.0.0-6-next.30": "2023-02-23T12:19:48.863Z",
+		"6.0.0-6-next.31": "2023-02-27T20:10:09.506Z",
+		"6.0.0-6-next.32": "2023-03-07T21:04:06.030Z",
+		"6.0.0-6-next.33": "2023-03-07T21:36:00.084Z",
+		"6.0.0-6-next.34": "2023-03-12T13:06:02.224Z",
+		"6.0.0-6-next.35": "2023-03-18T21:22:07.529Z",
+		"6.0.0-6-next.36": "2023-04-21T21:49:06.354Z",
+		"6.0.0-6-next.37": "2023-05-14T10:44:40.780Z",
+		"6.0.0-6-next.38": "2023-05-14T15:09:49.421Z",
+		"6.0.0-6-next.39": "2023-06-03T05:29:42.283Z",
+		"6.0.0-6-next.40": "2023-06-13T00:07:35.476Z",
+		"6.0.0-6-next.41": "2023-07-09T08:48:11.234Z",
+		"6.0.0-6-next.42": "2023-07-15T18:54:12.558Z",
+		"6.0.0-6-next.43": "2023-08-08T06:17:20.746Z",
+		"6.0.0-6-next.44": "2023-08-20T10:59:16.692Z",
+		"7.0.0-next.0": "2023-08-21T15:46:18.600Z",
+		"7.0.0-next.1": "2023-08-24T20:57:36.731Z",
+		"7.0.0-next.2": "2023-09-24T08:41:29.085Z",
+		"7.0.0-next.3": "2023-10-14T20:59:18.390Z",
+		"7.0.0-next.4": "2023-10-28T15:29:28.204Z",
+		"7.0.0-next.5": "2023-12-31T13:58:03.480Z",
+		"7.0.0-next.6": "2024-01-07T09:06:10.220Z",
+		"7.0.0-next-7.7": "2024-01-14T10:00:20.570Z",
+		"7.0.0-next-7.8": "2024-02-11T22:20:28.947Z",
+		"7.0.0-next-7.9": "2024-02-12T19:47:56.670Z",
+		"7.0.0-next-7.10": "2024-02-20T21:06:01.576Z",
+		"7.0.0-next-7.11": "2024-03-03T18:31:01.754Z",
+		"7.0.0-next-7.12": "2024-03-10T17:54:41.776Z",
+		"7.0.0-next-7.13": "2024-03-23T19:57:26.916Z",
+		"7.0.0-next-7.14": "2024-05-03T07:16:22.120Z",
+		"7.0.0-next-7.15": "2024-05-05T15:13:36.221Z",
+		"7.0.0-next-7.16": "2024-06-02T19:56:39.962Z",
+		"7.0.0-next-7.17": "2024-06-16T07:34:20.179Z",
+		"7.0.0-next-7.18": "2024-07-07T16:49:15.588Z",
+		"7.0.0-next-7.19": "2024-07-21T16:10:15.951Z",
+		"7.0.0-next-7.20": "2024-08-01T16:39:52.754Z",
+		"7.0.0-next-8.21": "2024-09-11T20:00:57.220Z",
+		"8.0.0-next-8.0": "2024-09-12T18:22:22.427Z",
+		"8.0.0-next-8.1": "2024-09-12T19:27:50.740Z",
+		"8.0.0-next-8.2": "2024-09-25T21:24:09.650Z",
+		"8.0.0-next-8.3": "2024-10-08T06:34:22.955Z",
+		"8.0.0-next-8.4": "2024-11-14T18:59:33.669Z",
+		"8.0.0-next-8.5": "2024-12-11T21:17:33.873Z",
+		"8.0.0-next-8.6": "2024-12-15T08:46:56.673Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"6-next": "6.0.0-6-next.25",
+		"latest": "6.0.0-6-next.44",
+		"next": "7.0.0-next.6",
+		"next-7": "7.0.0-next-7.20",
+		"next-8": "8.0.0-next-8.6"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"b6eb420d9dc4de8ef74d709243d35823\"",
+			"fetched": 1734468642873
+		}
+	},
+	"_distfiles": {
+		"logger-commons-6.0.0-6-next.25.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.25.tgz",
+			"sha": "3fff25d45ff4aa4461f96ba5af264bd5e508a204",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.26.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.26.tgz",
+			"sha": "f42446e66eb48b76e599172288b1391470a15fdd",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.27.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.27.tgz",
+			"sha": "64c815286af28708d9bf10e9cf15fd8d8604bc23",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.28.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.28.tgz",
+			"sha": "73e27436743ad15cdc2ef887a0f17b583efd0115",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.29.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.29.tgz",
+			"sha": "a79f0f7e512bdf947d36c11ca1bbafac3aedbb15",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.30.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.30.tgz",
+			"sha": "660a7bc98ced053a5174c769d4a7189477500b73",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.31.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.31.tgz",
+			"sha": "9da2e9c09ddb46d6e43b508705084071bcb5dc69",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.32.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.32.tgz",
+			"sha": "d74a6bb45e3e2d2c1c68c65a856a92c1d3a515b1",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.33.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.33.tgz",
+			"sha": "2ec56b3eeeb621b39fa17111562b43a388716af4",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.34.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.34.tgz",
+			"sha": "19abd9a8749759b86b66f549aacfd671a0e7a2bf",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.35.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.35.tgz",
+			"sha": "0699f277a06ca1747b6080653d0984b1d1939987",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.36.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.36.tgz",
+			"sha": "cfff2ccca61d62bffeba9cca0ab16a228d1c9fa9",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.37.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.37.tgz",
+			"sha": "cabe9cfc765e62226b3edb826794a12fe17d349f",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.38.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.38.tgz",
+			"sha": "a6b155d89af7df3792686995a6d0c7943a353a40",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.39.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.39.tgz",
+			"sha": "8d51beae011e5ead1c28700eadea037114724e54",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.40.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.40.tgz",
+			"sha": "1f8b286c915bc34aae10fd4a343b135a5ebd3ff6",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.41.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.41.tgz",
+			"sha": "068bf104976f799da1e929b7762b703102697e95",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.42.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.42.tgz",
+			"sha": "74c4f615b26ef44a9e179d8b2bdb043a9c827146",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.43.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.43.tgz",
+			"sha": "c0e74c80f0ac3286e154178812508c977c834942",
+			"registry": "npmjs"
+		},
+		"logger-commons-6.0.0-6-next.44.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-6.0.0-6-next.44.tgz",
+			"sha": "3a60ebd49a741efc31f11f6665b656ec476b2b66",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next.0.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.0.tgz",
+			"sha": "a600cb998fcd4425c6fedb7a7713773c3f9c697d",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next.1.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.1.tgz",
+			"sha": "045620c61fa71998b943945bfbbc52ede9cda733",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next.2.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.2.tgz",
+			"sha": "8c6ffc811885c4a474791facb274850edf94bc43",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next.3.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.3.tgz",
+			"sha": "62e72fc62b3aa117f84b2c4078869aa9b323dbcd",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next.4.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.4.tgz",
+			"sha": "f200e7561c12284f1125fca67f7687c5a6c45f51",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next.5.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.5.tgz",
+			"sha": "a13d1716bea45ebd74e92957946e9a48b2cf94e4",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next.6.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next.6.tgz",
+			"sha": "f6267972f49e4ad3a1dc1e811f24671dab61da37",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.7.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.7.tgz",
+			"sha": "9d5453a49f1d6852fbed80ae94162f7554ecd88b",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.8.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.8.tgz",
+			"sha": "833cb768577cd62bb895ef3c41ac8da03e98d863",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.9.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.9.tgz",
+			"sha": "459e7a3d781e110c1d0ddf30016a7c556be7814c",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.10.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.10.tgz",
+			"sha": "f5153c06a41f396a644996f9b9f87bf6362209ea",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.11.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.11.tgz",
+			"sha": "bb94a78464d81bd350ba0ca87adf00720ef69469",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.12.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.12.tgz",
+			"sha": "deb309f5b7c5688464c51dd404d95c6126a4a38c",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.13.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.13.tgz",
+			"sha": "9bdc86527e63c01f6232c59eaaaf2f6604db4fdf",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.14.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.14.tgz",
+			"sha": "099c50dec5cd22fd2afe8ffaed1b4ec532a73c73",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.15.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.15.tgz",
+			"sha": "98c85a234b89f42d08934e9e0352b467b90a3a91",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.16.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.16.tgz",
+			"sha": "a88f4a6794f8e4237bfd09ceb9fe6b3d86cdefce",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.17.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.17.tgz",
+			"sha": "fc7a584b8d64ea2295bc2b08d6e2ce8735a828a5",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.18.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.18.tgz",
+			"sha": "14155c3eed4ab2614a76beccad25e3f3510ebf0c",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.19.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.19.tgz",
+			"sha": "469d08165a0fa18482f46825b19f53d5593d879a",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-7.20.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-7.20.tgz",
+			"sha": "0394324b170e6082d6d6e0e4308fff96da9e7038",
+			"registry": "npmjs"
+		},
+		"logger-commons-7.0.0-next-8.21.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-7.0.0-next-8.21.tgz",
+			"sha": "13a8ffe62a5f13e9034f9ce172f57a23e96ba452",
+			"registry": "npmjs"
+		},
+		"logger-commons-8.0.0-next-8.0.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.0.tgz",
+			"sha": "6bb918f93828f2c0831b80cea3eb58506c23a852",
+			"registry": "npmjs"
+		},
+		"logger-commons-8.0.0-next-8.1.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.1.tgz",
+			"sha": "d134170e5951e6b26a742dc546c81db449dc6117",
+			"registry": "npmjs"
+		},
+		"logger-commons-8.0.0-next-8.2.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.2.tgz",
+			"sha": "8b3aa0ffd42f6eaca687b9c75ebca915aba52b94",
+			"registry": "npmjs"
+		},
+		"logger-commons-8.0.0-next-8.3.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.3.tgz",
+			"sha": "4ba99b361e1638985c9a952f721e374bc941c7fd",
+			"registry": "npmjs"
+		},
+		"logger-commons-8.0.0-next-8.4.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.4.tgz",
+			"sha": "1024df719409d0063acd3ad4488be8c9b210b894",
+			"registry": "npmjs"
+		},
+		"logger-commons-8.0.0-next-8.5.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.5.tgz",
+			"sha": "aaa477e1cddc283222928b2170184fba27eb5c64",
+			"registry": "npmjs"
+		},
+		"logger-commons-8.0.0-next-8.6.tgz": {
+			"url": "https://registry.npmjs.org/@verdaccio/logger-commons/-/logger-commons-8.0.0-next-8.6.tgz",
+			"sha": "775ff3a4439798ecae0846456bc20ffb9f748bd0",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {
+		"logger-commons-8.0.0-next-8.6.tgz": {
+			"shasum": "775ff3a4439798ecae0846456bc20ffb9f748bd0"
+		}
+	},
+	"_rev": "2-df58789488849dd9",
+	"_id": "@verdaccio/logger-commons",
+	"readme": ""
+}

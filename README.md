@@ -1,0 +1,1 @@
+tests to see if verdaccio works to cache tarballs in local repository and can install without network conncection in github workflow

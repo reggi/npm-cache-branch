@@ -1,0 +1,17 @@
+{
+  "name": "untitled-folder",
+  "version": "1.0.0",
+  "description": "tests to see if verdaccio works to cache tarballs in local repository and can install without network conncection in github workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Reggi",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "semver": "^7.6.3",
+    "verdaccio": "^6.0.4"
+  }
+}
