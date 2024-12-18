@@ -47,7 +47,7 @@ jobs:
           echo "!.npm/cache" > .gitignore
           echo "*" >> .gitignore
           git add .gitignore
-          git add .npm/cache
+          git add -f .npm/cache
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update npm cache"
             git push origin cache-branch --force
