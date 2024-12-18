@@ -12,6 +12,7 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "luxon": "^3.5.0",
-    "semver": "^7.6.3"
+    "semver": "^7.6.3",
+    "sort-package-json": "^2.12.0"
   }
 }
