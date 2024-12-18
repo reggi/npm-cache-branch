@@ -4,7 +4,7 @@
   "description": "tests to see if verdaccio works to cache tarballs in local repository and can install without network conncection in github workflow",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test.js"
   },
   "keywords": [],
   "author": "Reggi",
