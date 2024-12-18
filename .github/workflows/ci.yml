@@ -22,10 +22,10 @@ jobs:
           node-version: '22.x'
 
       - name: Start Verdaccio
-        run: npx verdaccio --config ./module_cache/config.yaml
+        run: npx verdaccio --config ./module_cache/config.yaml &
 
       - name: Wait for Verdaccio to start
-        run: sleep 10
+        run: sleep 30
 
       - name: Configure npm to use Verdaccio
         run: npm set registry http://localhost:4873/
