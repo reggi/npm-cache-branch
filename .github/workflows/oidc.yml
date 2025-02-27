@@ -3,6 +3,9 @@ name: workflow_deploy
 on:
   workflow_dispatch:
 
+permissions:
+  id-token: write # This is required for requesting the JWT
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
